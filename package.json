@@ -12,5 +12,17 @@
     "express": "~4.16.1",
     "http-errors": "~1.6.3",
     "morgan": "~1.9.1"
-  }
+  },
+  "description": "Servicio Web de Donacion",
+  "main": "app.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlanCanalesM/JugetronWeb.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlanCanalesM/JugetronWeb/issues"
+  },
+  "homepage": "https://github.com/AlanCanalesM/JugetronWeb#readme"
 }
