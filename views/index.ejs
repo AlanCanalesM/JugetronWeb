@@ -1,381 +1,328 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Jugetron</title>
-    <link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
-    <link href="/stylesheets/bootstrap.min.css" rel="stylesheet">
-    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-    <link href="/stylesheets/flexslider.css" rel="stylesheet" >
-    <link href="/stylesheets/styles.css" rel="stylesheet">
-    <link href="/stylesheets/queries.css" rel="stylesheet">
-    <link href="/stylesheets/animate.css" rel="stylesheet">
-        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-        <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-        <![endif]-->
-      </head>
-      <body id="top">
-        <header id="home">
-          <nav>
-            <div class="container-fluid">
-              <div class="row">
-                <div class="col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 col-xs-8 col-xs-offset-2">
-                  <nav class="pull">
-                    <ul class="top-nav">
-                      <li><a href="#intro">Introducción <span class="indicator"><i class="fa fa-angle-right"></i></span></a></li>
-                      <li><a href="#features">Caracteristicas <span class="indicator"><i class="fa fa-angle-right"></i></span></a></li>
-                      <li><a href="#portfolio">Conoce nuestro trabajo <span class="indicator"><i class="fa fa-angle-right"></i></span></a></li>
-                      <li><a href="#team">Team <span class="indicator"><i class="fa fa-angle-right"></i></span></a></li>
-                      <li><a href="#contact">Contáctanos <span class="indicator"><i class="fa fa-angle-right"></i></span></a></li>
-                    </ul>
-                  </nav>
-                </div>
-              </div>
-            </div>
-          </nav>
-          <section class="hero" id="hero">
-            <div class="container">
-              <div class="row">
-                <div class="col-md-12 text-right navicon">
-                  <a id="nav-toggle" class="nav_slide_button" href="#"><span></span></a>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-md-8 col-md-offset-2 text-center inner">
-                  <h1 class="animated fadeInDown">Juguetrón<span>Incorporate</span></h1>
-                  <p class="animated fadeInUp delay-05s">Una empresa dedicada a la donación de juguetes para  <em>Niños</em></p>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-md-6 col-md-offset-3 text-center">
-                  <a href="login.ejs" class="learn-more-btn">Comenzar</a>
-                </div>
-              </div>
-            </div>
-          </section>
-        </header>
-        <section class="intro text-center section-padding" id="intro">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-8 col-md-offset-2 wp1">
-                <h1 class="arrow">Por mas niños felices</h1>
-                <p>Ofrecemos la oportunidad a <a href="#">Todas las personas</a> de que puedan donar un cachito de felicidad a los niños que 
-                están pasando por malos momentos de su corta vida. Esta empresa está formada y pensada con la finalidad de proveer la felicidad
-                a los niños que hoy nos necesitan. <a href="#">¿Como lo hacemos?</a> Nuestro trabajo es hacer la recolección de juguetes de cualquiera
-                de ustedes, estos juguetes pasarán por un proceso de calidad y obtener los productos adecuados.</p>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="features text-center section-padding" id="features">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-12">
-                <h1 class="arrow">Amamos lo que hacemos y el porque lo hacemos</h1>
-                <div class="features-wrapper">
-                  <div class="col-md-4 wp2">
-                    <div class="icon">
-                      <i class="fa fa-laptop shadow"></i>
-                    </div>
-                    <h2>Desarrollando Soluciones</h2>
-                    <p>Nos encanta la idea de poder contribuir con la sociedad en
-                      problemas existenciales que hay en este mundo. Todo lo que hacemos es con
-                      dedicacion y con buenas intenciones.
-                    </p>
-                  </div>
-                  <div class="col-md-4 wp2 delay-05s">
-                    <div class="icon">
-                      <i class="fa fa-code shadow"></i>
-                    </div>
-                    <h2>Codificando Soluciones</h2>
-                    <p>Una forma de llegar a la gente es por los medios
-                      digitales con los que contamos en este momento. El flujo de 
-                      la información es más rápida hoy en día, y ¿Por qué no? Hay
-                      que aprovechar estas oportunidades para hacer verdaderos cambios.
-                    </p>
-                  </div>
-                  <div class="col-md-4 wp2 delay-1s">
-                    <div class="icon">
-                      <i class="fa fa-heart shadow"></i>
-                    </div>
-                    <h2>Dirección de Creatividad</h2>
-                    <p>Nuestra Creatividad no tiene limites, es por eso
-                      que la aprovechamos al máximo enfocandonos en lo 
-                      que realmente importa. Este no es nuestro primer trabajo.
-                      Contamos con diversas soluciones que nos hacen crecer como empresa.
-                    </p>
-                  </div>
-                  <div class="clearfix"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        
-        <section class="swag text-center">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-8 col-md-offset-2">
-                <h1>Queda pendiente<span>esta <em>sección</em> de aqui</span></h1>
-                <a href="#portfolio" class="down-arrow-btn"><i class="fa fa-chevron-down"></i></a>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="portfolio text-center section-padding" id="portfolio">
-          <div class="container">
-            <div class="row">
-              <div id="portfolioSlider">
-                <ul class="slides">
-                  <li>
-                    <div class="col-md-4 wp4">
-                      <div class="overlay-effect effects clearfix">
-                        <div class="img">
-                          <img src="images/portfolio-01.jpg" alt="Portfolio Item">
-                          <div class="overlay">
-                            <a href="#" class="expand"><i class="fa fa-search"></i><br>View More</a>
-                            <a class="close-overlay hidden">x</a>
-                          </div>
-                        </div>
-                      </div>
-                      <h2>Creative Minds</h2>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.</p>
-                    </div>
-                    <div class="col-md-4 wp4 delay-05s">
-                      <div class="overlay-effect effects clearfix">
-                        <div class="img">
-                          <img src="images/portfolio-02.jpg" alt="Portfolio Item">
-                          <div class="overlay">
-                            <a href="#" class="expand"><i class="fa fa-search"></i><br>View More</a>
-                            <a class="close-overlay hidden">x</a>
-                          </div>
-                        </div>
-                      </div>
-                      <h2>Creative Hearts</h2>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.</p>
-                    </div>
-                    <div class="col-md-4 wp4 delay-1s">
-                      <div class="overlay-effect effects clearfix">
-                        <div class="img">
-                          <img src="images/portfolio-03.jpg" alt="Portfolio Item">
-                          <div class="overlay">
-                            <a href="#" class="expand"><i class="fa fa-search"></i><br>View More</a>
-                            <a class="close-overlay hidden">x</a>
-                          </div>
-                        </div>
-                      </div>
-                      <h2>Creative Ideas</h2>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.</p>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="col-md-4 wp4">
-                      <div class="overlay-effect effects clearfix">
-                        <div class="img">
-                          <img src="images/portfolio-01.jpg" alt="Portfolio Item">
-                          <div class="overlay">
-                            <a href="#" class="expand"><i class="fa fa-search"></i><br>View More</a>
-                            <a class="close-overlay hidden">x</a>
-                          </div>
-                        </div>
-                      </div>
-                      <h2>Creative Minds</h2>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.</p>
-                    </div>
-                    <div class="col-md-4 wp4 delay-05s">
-                      <div class="overlay-effect effects clearfix">
-                        <div class="img">
-                          <img src="images/portfolio-02.jpg" alt="Portfolio Item">
-                          <div class="overlay">
-                            <a href="#" class="expand"><i class="fa fa-search"></i><br>View More</a>
-                            <a class="close-overlay hidden">x</a>
-                          </div>
-                        </div>
-                      </div>
-                      <h2>Creative Hearts</h2>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.</p>
-                    </div>
-                    <div class="col-md-4 wp4 delay-1s">
-                      <div class="overlay-effect effects clearfix">
-                        <div class="img">
-                          <img src="images/portfolio-03.jpg" alt="Portfolio Item">
-                          <div class="overlay">
-                            <a href="#" class="expand"><i class="fa fa-search"></i><br>View More</a>
-                            <a class="close-overlay hidden">x</a>
-                          </div>
-                        </div>
-                      </div>
-                      <h2>Creative Ideas</h2>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.</p>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </section>
-        <div class="ignite-cta text-center">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-12">
-                <a href="#" class="ignite-btn">Comienza con Nosotros</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <section class="team text-center section-padding" id="team">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-12">
-                <h1 class="arrow">¡Conoce a nuestro equipo!</h1>
-              </div>
-            </div>
-            <div class="row">
-              <div class="team-wrapper">
-                <div id="teamSlider">
-                  <ul class="slides">
-                    <li>
-                      <div class="col-md-4 wp5">
-                        <img src="images/Alan.png" alt="Team Member">
-                        <h2>Alan Arturo Canales Mujica</h2>
-                        <p>Soy un estudiante apasionado de ingeniería en software, 
-                          normalmente estoy aprendiendo sobre el desarrollo back-end, 
-                          y en este proyecto busco junto a todo mi equipo crear una 
-                          manera de ayudar a las personas de bajos recursos a poder 
-                          llevar sonrisas a los niños!</p>
-                        <div class="social">
-                          <ul class="social-buttons">
-                            <li><a href="#" class="social-btn"><i class="fa-brands fa-facebook"></i></a></li>
-                            <li><a href="#" class="social-btn"><i class="fa-brands fa-instagram-square"></i></a></li>
-                            <li><a href="#" class="social-btn"><i class="fa fa-envelope"></i></a></li>
-                          </ul>
-                        </div>
-                      </div>
+<%- include templates/header.ejs %>
 
-                      <div class="col-md-4 wp5 delay-05s">
-                        <img src="images/Diego.png" alt="Team Member">
-                        <h2>Diego Johan López Barrera</h2>
-                        <p>Soy diseñador y programador. Me gusta contribuir a la solución de
-                          los problemas sociales que actualmente existen. En juguetron trabajo
-                          para el area de desarrollo y diseño junto con más personas de mi equipo.
-                        </p>
-                        <div class="social">
-                          <ul class="social-buttons">
-                            <li><a href="#" class="social-btn"><i class="fa-brands fa-facebook"></i></a></li>
-                            <li><a href="#" class="social-btn"><i class="fa-brands fa-instagram-square"></i></a></li>
-                            <li><a href="#" class="social-btn"><i class="fa fa-envelope"></i></a></li>
-                          </ul>
-                        </div>
-                      </div>
-                      <div class="col-md-4 wp5 delay-1s">
-                        <img src="images/Jackie.png" alt="Team Member">
-                        <h2>Arlette Jacqueline Armenta Soto</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.</p>
-                        <div class="social">
-                          <ul class="social-buttons">
-                            <li><a href="#" class="social-btn"><i class="fa-brands fa-facebook"></i></a></li>
-                            <li><a href="#" class="social-btn"><i class="fa-brands fa-instagram-square"></i></a></li>
-                            <li><a href="#" class="social-btn"><i class="fa fa-envelope"></i></a></li>
-                          </ul>
-                        </div>
-                      </div>
-                      <div class="col-md-4 wp5">
-                        <img src="images/Yazmin.png" alt="Team Member">
-                        <h2>Yazmin Escorcia Cervantes</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.</p>
-                        <div class="social">
-                          <ul class="social-buttons">
-                            <li><a href="#" class="social-btn"><i class="fa-brands fa-facebook"></i></a></li>
-                            <li><a href="#" class="social-btn"><i class="fa-brands fa-instagram-square"></i></a></li>
-                            <li><a href="#" class="social-btn"><i class="fa fa-envelope"></i></a></li>
-                          </ul>
-                        </div>
-                    </li>
-                    
+<section class="hero" id="hero">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 text-right navicon">
+        <a id="nav-toggle" class="nav_slide_button" href="#"><span></span></a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2 text-center inner">
+        <h1 class="animated fadeInDown">Juguetrón<span>Incorporate</span></h1>
+        <p class="animated fadeInUp delay-05s">Una empresa dedicada a la donación de juguetes para <em>Niños</em></p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3 text-center">
+        <a href="" class="learn-more-btn">Comenzar</a>
+      </div>
+    </div>
+  </div>
+</section>
+</header>
+<section class="intro text-center section-padding" id="intro">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2 wp1">
+        <h1 class="arrow">Por mas niños felices</h1>
+        <p>Ofrecemos la oportunidad a <a href="#">Todas las personas</a> de que puedan donar un cachito de felicidad a
+          los niños que
+          están pasando por malos momentos de su corta vida. Esta empresa está formada y pensada con la finalidad de
+          proveer la felicidad
+          a los niños que hoy nos necesitan. <a href="#">¿Como lo hacemos?</a> Nuestro trabajo es hacer la recolección
+          de juguetes de cualquiera
+          de ustedes, estos juguetes pasarán por un proceso de calidad y obtener los productos adecuados.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="features text-center section-padding" id="features">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h1 class="arrow">Amamos lo que hacemos y el porque lo hacemos</h1>
+        <div class="features-wrapper">
+          <div class="col-md-4 wp2">
+            <div class="icon">
+              <i class="fa fa-laptop shadow"></i>
+            </div>
+            <h2>Desarrollando Soluciones</h2>
+            <p>Nos encanta la idea de poder contribuir con la sociedad en
+              problemas existenciales que hay en este mundo. Todo lo que hacemos es con
+              dedicacion y con buenas intenciones.
+            </p>
+          </div>
+          <div class="col-md-4 wp2 delay-05s">
+            <div class="icon">
+              <i class="fa fa-code shadow"></i>
+            </div>
+            <h2>Codificando Soluciones</h2>
+            <p>Una forma de llegar a la gente es por los medios
+              digitales con los que contamos en este momento. El flujo de
+              la información es más rápida hoy en día, y ¿Por qué no? Hay
+              que aprovechar estas oportunidades para hacer verdaderos cambios.
+            </p>
+          </div>
+          <div class="col-md-4 wp2 delay-1s">
+            <div class="icon">
+              <i class="fa fa-heart shadow"></i>
+            </div>
+            <h2>Dirección de Creatividad</h2>
+            <p>Nuestra Creatividad no tiene limites, es por eso
+              que la aprovechamos al máximo enfocandonos en lo
+              que realmente importa. Este no es nuestro primer trabajo.
+              Contamos con diversas soluciones que nos hacen crecer como empresa.
+            </p>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="swag text-center">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        <h1>Queda pendiente<span>esta <em>sección</em> de aqui</span></h1>
+        <a href="#portfolio" class="down-arrow-btn"><i class="fa fa-chevron-down"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="portfolio text-center section-padding" id="portfolio">
+  <div class="container">
+    <div class="row">
+      <div id="portfolioSlider">
+        <ul class="slides">
+          <li>
+            <div class="col-md-4 wp4">
+              <div class="overlay-effect effects clearfix">
+                <div class="img">
+                  <img src="images/portfolio-01.jpg" alt="Portfolio Item">
+                  <div class="overlay">
+                    <a href="#" class="expand"><i class="fa fa-search"></i><br>View More</a>
+                    <a class="close-overlay hidden">x</a>
+                  </div>
+                </div>
+              </div>
+              <h2>Creative Minds</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar
+                imperdiet. Praesent non adipiscing libero.</p>
+            </div>
+            <div class="col-md-4 wp4 delay-05s">
+              <div class="overlay-effect effects clearfix">
+                <div class="img">
+                  <img src="images/portfolio-02.jpg" alt="Portfolio Item">
+                  <div class="overlay">
+                    <a href="#" class="expand"><i class="fa fa-search"></i><br>View More</a>
+                    <a class="close-overlay hidden">x</a>
+                  </div>
+                </div>
+              </div>
+              <h2>Creative Hearts</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar
+                imperdiet. Praesent non adipiscing libero.</p>
+            </div>
+            <div class="col-md-4 wp4 delay-1s">
+              <div class="overlay-effect effects clearfix">
+                <div class="img">
+                  <img src="images/portfolio-03.jpg" alt="Portfolio Item">
+                  <div class="overlay">
+                    <a href="#" class="expand"><i class="fa fa-search"></i><br>View More</a>
+                    <a class="close-overlay hidden">x</a>
+                  </div>
+                </div>
+              </div>
+              <h2>Creative Ideas</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar
+                imperdiet. Praesent non adipiscing libero.</p>
+            </div>
+          </li>
+          <li>
+            <div class="col-md-4 wp4">
+              <div class="overlay-effect effects clearfix">
+                <div class="img">
+                  <img src="images/portfolio-01.jpg" alt="Portfolio Item">
+                  <div class="overlay">
+                    <a href="#" class="expand"><i class="fa fa-search"></i><br>View More</a>
+                    <a class="close-overlay hidden">x</a>
+                  </div>
+                </div>
+              </div>
+              <h2>Creative Minds</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar
+                imperdiet. Praesent non adipiscing libero.</p>
+            </div>
+            <div class="col-md-4 wp4 delay-05s">
+              <div class="overlay-effect effects clearfix">
+                <div class="img">
+                  <img src="images/portfolio-02.jpg" alt="Portfolio Item">
+                  <div class="overlay">
+                    <a href="#" class="expand"><i class="fa fa-search"></i><br>View More</a>
+                    <a class="close-overlay hidden">x</a>
+                  </div>
+                </div>
+              </div>
+              <h2>Creative Hearts</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar
+                imperdiet. Praesent non adipiscing libero.</p>
+            </div>
+            <div class="col-md-4 wp4 delay-1s">
+              <div class="overlay-effect effects clearfix">
+                <div class="img">
+                  <img src="images/portfolio-03.jpg" alt="Portfolio Item">
+                  <div class="overlay">
+                    <a href="#" class="expand"><i class="fa fa-search"></i><br>View More</a>
+                    <a class="close-overlay hidden">x</a>
+                  </div>
+                </div>
+              </div>
+              <h2>Creative Ideas</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar
+                imperdiet. Praesent non adipiscing libero.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="ignite-cta text-center">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <a href="#" class="ignite-btn">Comienza con Nosotros</a>
+      </div>
+    </div>
+  </div>
+</div>
+<section class="team text-center section-padding" id="team">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h1 class="arrow">¡Conoce a nuestro equipo!</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="team-wrapper">
+        <div id="teamSlider">
+          <ul class="slides">
+            <li>
+              <div class="col-md-4 wp5">
+                <img src="images/Alan.png" alt="Team Member">
+                <h2>Alan Arturo Canales Mujica</h2>
+                <p>Soy un estudiante apasionado de ingeniería en software,
+                  normalmente estoy aprendiendo sobre el desarrollo back-end,
+                  y en este proyecto busco junto a todo mi equipo crear una
+                  manera de ayudar a las personas de bajos recursos a poder
+                  llevar sonrisas a los niños!</p>
+                <div class="social">
+                  <ul class="social-buttons">
+                    <li><a href="#" class="social-btn"><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href="#" class="social-btn"><i class="fa-brands fa-instagram-square"></i></a></li>
+                    <li><a href="#" class="social-btn"><i class="fa fa-envelope"></i></a></li>
                   </ul>
                 </div>
               </div>
-            </div>
-          </div>
-        </section>
-        <section class="subscribe text-center">
-          <div class="container">
-            <h1><i class="fa fa-paper-plane"></i><span>Suscribete a nuestra Página</span></h1>
-            <form action="#">
-              <input type="text" name="" value="" placeholder="" required>
-              <input type="submit" name="" value="Send">
-            </form>
-          </div>
-        </section>
-        <section class="dark-bg text-center section-padding contact-wrap" id="contact">
-          <a href="#top" class="up-btn"><i class="fa fa-chevron-up"></i></a>
-          <div class="container">
-            <div class="row">
-              <div class="col-md-12">
-                <h1 class="arrow">Contáctanos a traves de los Siguientes datos</h1>
-              </div>
-            </div>
-            <div class="row contact-details">
-              <div class="col-md-4">
-                <div class="light-box box-hover">
-                  <h2><i class="fa fa-map-marker"></i><span>Address</span></h2>
-                  <p>Pachuca de Soto, Hidalgo</p>
-                </div>
-              </div>
-              <div class="col-md-4">
-                <div class="light-box box-hover">
-                  <h2><i class="fa fa-mobile"></i><span>Phone</span></h2>
-                  <p>+52 772 141 5466</p>
-                </div>
-              </div>
-              <div class="col-md-4">
-                <div class="light-box box-hover">
-                  <h2><i class="fa fa-paper-plane"></i><span>Email</span></h2>
-                  <p><a href="#">juguetron2022@gmail.com</a></p>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-12">
-                <ul class="social-buttons">
-                  <li><a href="#" class="social-btn"><i class="fa-brands fa-facebook"></i></a></li>
-                            <li><a href="#" class="social-btn"><i class="fa-brands fa-instagram-square"></i></a></li>
-                            <li><a href="#" class="social-btn"><i class="fa fa-envelope"></i></a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </section>
-        <footer>
-          <div class="container">
-            <div class="row">
-              <div class="col-md-6">
-                <ul class="legals">
-                  <li><a href="#">Terms &amp; Conditions</a></li>
-                  <li><a href="#">Legals</a></li>
-                </ul>
-              </div>
-              <div class="col-md-6 credit">
-                <p>Una página dedicada al desarrollo de soluciones <a href="#"><em>Juguetron</em></a></p>
-              </div>
-            </div>
-          </div>
-        </footer>
-        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-        <!-- Include all compiled plugins (below), or include individual files as needed -->
-        <script src="/javascripts/waypoints.min.js"></script>
-        <script src="/javascripts/bootstrap.min.js"></script>
-        <script src="/javascripts/scripts.js"></script>
-        <script src="/javascripts/jquery.flexslider.js"></script>
-        <script src="/javascripts/modernizr.js"></script>
-        <script src="https://kit.fontawesome.com/f0d32193cc.js" crossorigin="anonymous"></script>
 
-        
-      </body>
-    </html>
+              <div class="col-md-4 wp5 delay-05s">
+                <img src="images/Diego.png" alt="Team Member">
+                <h2>Diego Johan López Barrera</h2>
+                <p>Soy diseñador y programador. Me gusta contribuir a la solución de
+                  los problemas sociales que actualmente existen. En juguetron trabajo
+                  para el area de desarrollo y diseño junto con más personas de mi equipo.
+                </p>
+                <div class="social">
+                  <ul class="social-buttons">
+                    <li><a href="#" class="social-btn"><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href="#" class="social-btn"><i class="fa-brands fa-instagram-square"></i></a></li>
+                    <li><a href="#" class="social-btn"><i class="fa fa-envelope"></i></a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-4 wp5 delay-1s">
+                <img src="images/Jackie.png" alt="Team Member">
+                <h2>Arlette Jacqueline Armenta Soto</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar
+                  imperdiet. Praesent non adipiscing libero.</p>
+                <div class="social">
+                  <ul class="social-buttons">
+                    <li><a href="#" class="social-btn"><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href="#" class="social-btn"><i class="fa-brands fa-instagram-square"></i></a></li>
+                    <li><a href="#" class="social-btn"><i class="fa fa-envelope"></i></a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-4 wp5">
+                <img src="images/Yazmin.png" alt="Team Member">
+                <h2>Yazmin Escorcia Cervantes</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar
+                  imperdiet. Praesent non adipiscing libero.</p>
+                <div class="social">
+                  <ul class="social-buttons">
+                    <li><a href="#" class="social-btn"><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href="#" class="social-btn"><i class="fa-brands fa-instagram-square"></i></a></li>
+                    <li><a href="#" class="social-btn"><i class="fa fa-envelope"></i></a></li>
+                  </ul>
+                </div>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="subscribe text-center">
+  <div class="container">
+    <h1><i class="fa fa-paper-plane"></i><span>Suscribete a nuestra Página</span></h1>
+    <form action="#">
+      <input type="text" name="" value="" placeholder="" required>
+      <input type="submit" name="" value="Send">
+    </form>
+  </div>
+</section>
+<section class="dark-bg text-center section-padding contact-wrap" id="contact">
+  <a href="#top" class="up-btn"><i class="fa fa-chevron-up"></i></a>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h1 class="arrow">Contáctanos a traves de los Siguientes datos</h1>
+      </div>
+    </div>
+    <div class="row contact-details">
+      <div class="col-md-4">
+        <div class="light-box box-hover">
+          <h2><i class="fa fa-map-marker"></i><span>Address</span></h2>
+          <p>Pachuca de Soto, Hidalgo</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="light-box box-hover">
+          <h2><i class="fa fa-mobile"></i><span>Phone</span></h2>
+          <p>+52 772 141 5466</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="light-box box-hover">
+          <h2><i class="fa fa-paper-plane"></i><span>Email</span></h2>
+          <p><a href="#">juguetron2022@gmail.com</a></p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <ul class="social-buttons">
+          <li><a href="#" class="social-btn"><i class="fa-brands fa-facebook"></i></a></li>
+          <li><a href="#" class="social-btn"><i class="fa-brands fa-instagram-square"></i></a></li>
+          <li><a href="#" class="social-btn"><i class="fa fa-envelope"></i></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<%- include templates/footer.ejs %>
