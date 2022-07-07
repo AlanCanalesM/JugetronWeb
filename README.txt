@@ -13,3 +13,4 @@ Hacer push para los cambios
 3.- git commit -m "aqui ponen entre comillas la descripción de sus cambios"
 4.- git branch -M main
 5.- git push origin main
+ y ya
