@@ -24,5 +24,7 @@
   "bugs": {
     "url": "https://github.com/AlanCanalesM/JugetronWeb/issues"
   },
-  "homepage": "https://github.com/AlanCanalesM/JugetronWeb#readme"
+  "homepage": "https://github.com/AlanCanalesM/JugetronWeb#readme",
+  "devDependencies": {},
+  "keywords": []
 }
