@@ -42,6 +42,6 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-//*Arlette 
+//*A
 
 module.exports = app;
