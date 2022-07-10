@@ -11,7 +11,8 @@
     "ejs": "~2.6.1",
     "express": "~4.16.1",
     "http-errors": "~1.6.3",
-    "morgan": "~1.9.1"
+    "morgan": "~1.9.1",
+    "mysql": "^2.18.1"
   },
   "description": "Servicio Web de Donacion",
   "main": "app.js",
@@ -25,6 +26,5 @@
     "url": "https://github.com/AlanCanalesM/JugetronWeb/issues"
   },
   "homepage": "https://github.com/AlanCanalesM/JugetronWeb#readme",
-  "devDependencies": {},
   "keywords": []
 }
