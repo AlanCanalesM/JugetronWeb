@@ -6,4 +6,5 @@ router.get('/', function (req, res, next) {
     res.render('main', { title: 'Loggeate' });
 });
 
+
 module.exports = router;
