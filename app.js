@@ -9,7 +9,7 @@ var loginRouter = require('./routes/login');
 var mainRouter = require('./routes/main');
 var serviciologin = require('./routes/serviciologin');
 var servicioRegistrar = require('./routes/servicioRegistrar');
-
+//alan
 
 
 var app = express();
