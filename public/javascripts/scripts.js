@@ -1,5 +1,6 @@
 /***************** Waypoints ******************/
 
+
 $(document).ready(function() {
 
 	$('.wp1').waypoint(function() {
