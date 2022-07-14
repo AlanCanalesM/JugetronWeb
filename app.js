@@ -7,8 +7,9 @@ const bodyParser = require('body-parser');
 var indexRouter = require('./routes/index');
 var loginRouter = require('./routes/login');
 var mainRouter = require('./routes/main');
-var serviciologin = require('./routes/serviciologin')
-
+var serviciologin = require('./routes/serviciologin');
+var servicioRegistrar = require('./routes/servicioRegistrar');
+//alan
 
 
 var app = express();
@@ -24,12 +25,11 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-
-
 app.use('/main', mainRouter);
 app.use('/serviciologin', serviciologin);
 app.use('/login', loginRouter);
 app.use('/main', mainRouter);
+app.use('/servicioRegistrar', servicioRegistrar);
 
 
 // catch 404 and forward to error handler
