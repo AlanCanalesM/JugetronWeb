@@ -4,10 +4,15 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const bodyParser = require('body-parser');
+
+var pruebaRouter = require('./routes/prueba');
+// Ventanas
 var indexRouter = require('./routes/index');
 var loginRouter = require('./routes/login');
 var mainRouter = require('./routes/main');
-var serviciologin = require('./routes/serviciologin')
+var serviciologin = require('./routes/serviciologin');
+var dashRouter = require('./routes/dashboard');
+var ctrlUsuariosRouter = require('./routes/ctrlUsuarios');
 
 
 
@@ -25,12 +30,15 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 
+//variable de prueba
+app.use('/prueba', pruebaRouter);
+//end variable de prueba
 
-app.use('/main', mainRouter);
 app.use('/serviciologin', serviciologin);
 app.use('/login', loginRouter);
 app.use('/main', mainRouter);
-
+app.use('/dashboard', dashRouter);
+app.use('/ctrlUsuarios', ctrlUsuariosRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
