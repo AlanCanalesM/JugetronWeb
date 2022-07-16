@@ -11,9 +11,14 @@ var indexRouter = require('./routes/index');
 var loginRouter = require('./routes/login');
 var mainRouter = require('./routes/main');
 var serviciologin = require('./routes/serviciologin');
+<<<<<<< HEAD
 var dashRouter = require('./routes/dashboard');
 var ctrlUsuariosRouter = require('./routes/ctrlUsuarios');
 
+=======
+var servicioRegistrar = require('./routes/servicioRegistrar');
+//alan
+>>>>>>> c7e03028d35f8f92f5dd51dd374567a3cf07333a
 
 
 var app = express();
@@ -29,6 +34,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
+<<<<<<< HEAD
 
 //variable de prueba
 app.use('/prueba', pruebaRouter);
@@ -39,6 +45,14 @@ app.use('/login', loginRouter);
 app.use('/main', mainRouter);
 app.use('/dashboard', dashRouter);
 app.use('/ctrlUsuarios', ctrlUsuariosRouter);
+=======
+app.use('/main', mainRouter);
+app.use('/serviciologin', serviciologin);
+app.use('/login', loginRouter);
+app.use('/main', mainRouter);
+app.use('/servicioRegistrar', servicioRegistrar);
+
+>>>>>>> c7e03028d35f8f92f5dd51dd374567a3cf07333a
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
