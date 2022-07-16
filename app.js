@@ -5,10 +5,16 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var session = require('express-session');
 const bodyParser = require('body-parser');
+
+var pruebaRouter = require('./routes/prueba');
+// Ventanas
 var indexRouter = require('./routes/index');
 var loginRouter = require('./routes/login');
 var mainRouter = require('./routes/main');
 var serviciologin = require('./routes/serviciologin');
+var dashRouter = require('./routes/dashboard');
+var ctrlUsuariosRouter = require('./routes/ctrlUsuarios');
+var logout = require('./routes/logout');
 var servicioRegistrar = require('./routes/servicioRegistrar');
 const fs = require('fs');
 //alan
@@ -28,11 +34,18 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(session({secret: '123456', resave: true, saveUninitialized: true}));
 
 app.use('/', indexRouter);
-app.use('/main', mainRouter);
+
+//variable de prueba
+app.use('/prueba', pruebaRouter);
+//end variable de prueba
+
 app.use('/serviciologin', serviciologin);
 app.use('/login', loginRouter);
 app.use('/main', mainRouter);
+app.use('/dashboard', dashRouter);
+app.use('/ctrlUsuarios', ctrlUsuariosRouter);
 app.use('/servicioRegistrar', servicioRegistrar);
+app.use('/logout', logout);
 
 
 // catch 404 and forward to error handler

@@ -19,7 +19,7 @@ router.post('/', (request, response) => {
     if(result[0]!=null){
      
       /*response.redirect("http://localhost:3000/");*/
-      response.send("Este nombre de usuario o emailya estan en uso");
+      response.send("Este nombre de usuario o email ya estan en uso");
     }else{
         pool.query("INSERT INTO usuarios (nombre, nom_cuenta, password, email) VALUES (?,?,?,?)",[nombre,nom_cuenta,password, email], (error, result) => {
             if (error) throw error;
