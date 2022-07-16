@@ -20,6 +20,8 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->
+
+        
   </head>
 
   <body id="top">
@@ -30,6 +32,8 @@
             <div class="col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 col-xs-8 col-xs-offset-2">
               <nav class="pull">
                 <ul class="top-nav">
+                  <li><a href="" id="usuario"><span class="indicator"><i class="fa fa-angle-right"></i></span></a>
+                  </li>
                   <li><a href="#intro">Introducción <span class="indicator"><i class="fa fa-angle-right"></i></span></a>
                   </li>
                   <li><a href="#features">Caracteristicas <span class="indicator"><i
@@ -352,6 +356,16 @@
 
   <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
   <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <script type="text/javascript">
+          
+    window.addEventListener('load', function(){
+      
+        alert('<%= nombre %>');
+        document.getElementById("usuario").innerHTML='<%= nombre %>';
+       
+    });
+  </script>
+  
 
 </body>
 </html>

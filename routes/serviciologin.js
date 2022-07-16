@@ -15,7 +15,10 @@ router.post('/', (request, response) => {
       if(result[0]!=null){
        
         /*response.redirect("http://localhost:3000/");*/
-        response.send("Correcto estas dentro");
+        request.session.nombre=request.body.nombre;
+    
+        response.render('index', { nombre: request.session.nombre });
+     
       }else{
         response.send("Credenciales erroneas");
        
