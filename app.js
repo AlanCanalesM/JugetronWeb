@@ -7,29 +7,23 @@ var session = require('express-session');
 const bodyParser = require('body-parser');
 
 var pruebaRouter = require('./routes/prueba');
+var createUsersRouter = require('./routes/createUsers');
+
 // Ventanas
 var indexRouter = require('./routes/index');
 var loginRouter = require('./routes/login');
 var mainRouter = require('./routes/main');
 var serviciologin = require('./routes/serviciologin');
-<<<<<<< HEAD
-
 var dashRouter = require('./routes/dashboard');
 var ctrlUsuariosRouter = require('./routes/ctrlUsuarios');
-
-
-=======
 var dashRouter = require('./routes/dashboard');
-var ctrlUsuariosRouter = require('./routes/ctrlUsuarios');
 var logout = require('./routes/logout');
->>>>>>> 704c35d41c84d2fcbc6bf2660e51c83b1cf57653
 var servicioRegistrar = require('./routes/servicioRegistrar');
 const fs = require('fs');
+const { json } = require('body-parser');
 //alan
-<<<<<<< HEAD
 
-=======
->>>>>>> 704c35d41c84d2fcbc6bf2660e51c83b1cf57653
+
 
 
 var app = express();
@@ -45,11 +39,10 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(session({secret: '123456', resave: true, saveUninitialized: true}));
 
-app.use('/', indexRouter);
-<<<<<<< HEAD
+app.use(express.urlencoded({extended:false}));
+app.use(express(json));
 
-=======
->>>>>>> 704c35d41c84d2fcbc6bf2660e51c83b1cf57653
+app.use('/', indexRouter);
 
 //variable de prueba
 app.use('/prueba', pruebaRouter);
@@ -60,21 +53,13 @@ app.use('/login', loginRouter);
 app.use('/main', mainRouter);
 app.use('/dashboard', dashRouter);
 app.use('/ctrlUsuarios', ctrlUsuariosRouter);
-<<<<<<< HEAD
-
+app.use('/createUsers', createUsersRouter);
 app.use('/main', mainRouter);
 app.use('/serviciologin', serviciologin);
 app.use('/login', loginRouter);
 app.use('/main', mainRouter);
-=======
->>>>>>> 704c35d41c84d2fcbc6bf2660e51c83b1cf57653
 app.use('/servicioRegistrar', servicioRegistrar);
 app.use('/logout', logout);
-
-<<<<<<< HEAD
-
-=======
->>>>>>> 704c35d41c84d2fcbc6bf2660e51c83b1cf57653
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
