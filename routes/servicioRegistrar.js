@@ -26,14 +26,9 @@ router.post('/', (request, response) => {
 
         response.send("Agregado correctamente");
 
-
-
       });
-
     };
   });
-
-
 });
 
 module.exports = router;
