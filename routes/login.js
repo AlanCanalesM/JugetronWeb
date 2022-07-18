@@ -10,7 +10,7 @@ router.get('/', function (req, res, next) {
         console.log(resultados);
     });
 
-    res.render('login', { title: 'Loggeate' });
+    res.render('login', { title: 'Loggeate'});
 });
 
 
