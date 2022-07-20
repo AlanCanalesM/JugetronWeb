@@ -45,7 +45,7 @@ app.use(express.urlencoded({extended:false}));
 app.use(express(json));
 
 app.use('/', indexRouter);
-
+//alanzo
 //variable de prueba
 app.use('/prueba', pruebaRouter);
 //end variable de prueba

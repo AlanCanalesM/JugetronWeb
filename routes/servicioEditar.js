@@ -2,6 +2,7 @@ var express = require('express');
 const pool = require('../conexion/conexion');
 var router = express.Router();
 
+//alaan
 router.post('/', (request, response) => {
   const nombre = request.body.nombre;
   const nom_cuenta = request.body.nom_cuenta;

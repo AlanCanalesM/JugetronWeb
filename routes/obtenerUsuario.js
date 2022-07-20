@@ -3,7 +3,7 @@ const { response } = require('../app');
 const pool = require('../conexion/conexion');
 var router = express.Router();
 
-
+//alan
 router.post('/', (request, response) =>{
 
     nom_cuenta=request.body.nom_cuenta;
