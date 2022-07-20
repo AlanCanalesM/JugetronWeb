@@ -21,6 +21,8 @@ var logout = require('./routes/logout');
 var servicioRegistrar = require('./routes/servicioRegistrar');
 const fs = require('fs');
 const { json } = require('body-parser');
+var servicioEditar = require('./routes/servicioEditar');
+var obtenerUsuario = require('./routes/obtenerUsuario');
 //alan
 
 
@@ -60,6 +62,8 @@ app.use('/login', loginRouter);
 app.use('/main', mainRouter);
 app.use('/servicioRegistrar', servicioRegistrar);
 app.use('/logout', logout);
+app.use('/servicioEditar', servicioEditar);
+app.use('/obtenerUsuario', obtenerUsuario);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

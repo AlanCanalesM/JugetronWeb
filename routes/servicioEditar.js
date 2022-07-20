@@ -7,9 +7,14 @@ router.post('/', (request, response) => {
   const nom_cuenta = request.body.nom_cuenta;
   const password = request.body.password;
   const email = request.body.email;
-  const imagen = request.body.imagen;
+  
 
-  pool.query("SELECT * FROM usuarios WHERE nom_cuenta=? or email=?", [nom_cuenta, email], (error, result) => {
+  pool.query("UPDATE usuarios SET nombre=?, nom_cuenta=?, password=?, email=? WHERE nom_cuenta=?", [nombre,nom_cuenta ,password, email, nom_cuenta], (error, result) => {
+
+    if(error) throw error;
+
+    response.send('Se actualizo tu registro');
+
     
   });
 });
