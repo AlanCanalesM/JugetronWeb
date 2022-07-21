@@ -4,16 +4,16 @@ const pool = require('../conexion/conexion');
 var router = express.Router();
 
 //alan
-router.post('/', (request, response) =>{
+router.get('/:nom_cuenta', (request, response) =>{
 
-    nom_cuenta=request.body.nom_cuenta;
+    nom_cuenta=request.params.nom_cuenta;
 
     pool.query("SELECT * FROM usuarios WHERE nom_cuenta=?", nom_cuenta, (error, result)  =>{
 
 
         if(error) throw error;
-
-        response.send(result);
+//response.status(200).send((result[0].id).toString());
+        response.send({nombre:result[0].nombre.toString(),user:result[0].nom_cuenta.toString(), pass:result[0].password.toString(), email:result[0].email.toString() });
 
 
     })
