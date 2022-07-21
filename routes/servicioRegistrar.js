@@ -20,31 +20,9 @@ router.post('/', (request, response) => {
 
       /*response.redirect("http://localhost:3000/");*/
       response.send("Este nombre de usuario o email ya estan en uso");
-<<<<<<< HEAD
-    }else{
-        pool.query("INSERT INTO usuarios (nombre, nom_cuenta, password, email) VALUES (?,?,?,?)",[nombre,nom_cuenta,password, email], (error, result) => {
-            if (error) throw error;
-      
-            //response.status(200).send((result[0].id).toString());
-            /*if(result[0]!=null){
-             
-              /*response.redirect("http://localhost:3000/");*/
-              response.send("Agregado correctamente");
-            //}else{
-              //response.send("Credenciales erroneas");
-             
-            //}
-            //{}
-     
-    });
-      
-  };
-});
-=======
     } else {
       pool.query("INSERT INTO usuarios (nombre, nom_cuenta, password, email) VALUES (?,?,?,?)", [nombre, nom_cuenta, password, email], (error, result) => {
         if (error) throw error;
->>>>>>> 57b084eaa346bda31b5428b7cb16a5fcfff542e0
 
         response.send("Agregado correctamente");
 

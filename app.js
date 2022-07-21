@@ -19,14 +19,11 @@ var ctrlUsuariosRouter = require('./routes/ctrlUsuarios');
 var dashRouter = require('./routes/dashboard');
 var logout = require('./routes/logout');
 var servicioRegistrar = require('./routes/servicioRegistrar');
-<<<<<<< HEAD
-var dashboardusua = require('./routes/dashboardusua');
-=======
 const fs = require('fs');
 const { json } = require('body-parser');
 var servicioEditar = require('./routes/servicioEditar');
 var obtenerUsuario = require('./routes/obtenerUsuario');
->>>>>>> 57b084eaa346bda31b5428b7cb16a5fcfff542e0
+var dashUsuariosRouter = require('./routes/dashboardUsuarios');
 //alan
 
 
@@ -37,7 +34,6 @@ var app = express();
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
-
 
 app.use(logger('dev'));
 app.use(bodyParser.urlencoded({extended:true}));
@@ -66,14 +62,10 @@ app.use('/serviciologin', serviciologin);
 app.use('/login', loginRouter);
 app.use('/main', mainRouter);
 app.use('/servicioRegistrar', servicioRegistrar);
-<<<<<<< HEAD
-app.use('/dashboardusua', dashboardusua);
-
-=======
 app.use('/logout', logout);
 app.use('/servicioEditar', servicioEditar);
 app.use('/obtenerUsuario', obtenerUsuario);
->>>>>>> 57b084eaa346bda31b5428b7cb16a5fcfff542e0
+app.use('/dashboardUsuarios', dashUsuariosRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

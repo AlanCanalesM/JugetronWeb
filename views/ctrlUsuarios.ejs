@@ -23,19 +23,19 @@
                             <input type="text" class="form-control" id="nombre" name="nombre" tabindex="1">
                         </div>
                         <div class="mb-3">
-                            <label class="form-label">Nombre Completo</label>
+                            <label class="form-label" id="lblNombre">Nombre Completo</label>
                             <input type="text" class="form-control" id="nombre" name="nombre" tabindex="1">
                         </div>
                         <div class="mb-3">
-                            <label class="form-label">UserName</label>
+                            <label class="form-label" id="lblUser">UserName</label>
                             <input type="text" class="form-control" id="nom_cuenta" name="nom_cuenta" tabindex="2">
                         </div>
                         <div class="mb-3">
-                            <label class="form-label">Contraseña</label>
+                            <label class="form-label" id="lblPass">Contraseña</label>
                             <input type="password" class="form-control" id="password" name="password" tabindex="3">
                         </div>
                         <div class="mb-3">
-                            <label class="form-label">Correo e-mail</label>
+                            <label class="form-label" id="lblEmail">Correo e-mail</label>
                             <input type="email" class="form-control" id="email" name="email" tabindex="4">
                         </div>
                     </div>
@@ -105,8 +105,8 @@
                                         <%= usuarios.email %>
                                     </td>
                                     <td>
-                                        <a href="/editUsers/<%= usuarios.id %>" class="btn btn-outline-info"
-                                            data-toggle="modal" data-target="#editarModal">Editar</a>
+                                        <a href="/obtenerUsuario/<%= usuarios.nom_cuenta %>" class="btn btn-outline-info aLink"
+                                            data-toggle="modal" data-target="#editarModal" id="click">Editar</a>
                                         <a href="/deleteUsers" class="btn btn-outline-danger">Eliminar</a>
                                     </td>
                                 </tr>
@@ -120,7 +120,10 @@
     </div>
     <!-- /.container-fluid -->
     <!-- /.container-fluid -->
+  
 
     </div>
     <!-- End of Main Content -->
     <%- include templates/footer_dash.ejs %>
+
+  
