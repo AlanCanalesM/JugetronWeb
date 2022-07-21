@@ -1,0 +1,126 @@
+<%- include templates/header_dash.ejs %>
+    <!-- Begin Page Content -->
+    <!-- Begin Page Content -->
+    <div class="container-fluid">
+
+        <!-- Page Heading -->
+        <h1 class="h3 mb-2 text-gray-800">Control de Usuarios</h1>
+
+        <!--Modal Editar-->
+        <div class="modal fade" id="editarModal" tabindex="-1" role="dialog" aria-labelledby="tituloVentana"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 id="tituloVentana">Editar Usuario</h5>
+                        <button class="close" data-dismiss="modal" aria-label="Cerrar">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="mb-3">
+                            <label class="form-label">Id</label>
+                            <input type="text" class="form-control" id="nombre" name="nombre" tabindex="1">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Nombre Completo</label>
+                            <input type="text" class="form-control" id="nombre" name="nombre" tabindex="1">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">UserName</label>
+                            <input type="text" class="form-control" id="nom_cuenta" name="nom_cuenta" tabindex="2">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Contraseña</label>
+                            <input type="password" class="form-control" id="password" name="password" tabindex="3">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Correo e-mail</label>
+                            <input type="email" class="form-control" id="email" name="email" tabindex="4">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-outline-warning" type="button" data-dismiss="modal">
+                            Cerrar
+                        </button>
+                        <button class="btn btn-outline-info" type="button">
+                            Aceptar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--End Modal Editar-->
+
+        <!-- DataTales Example -->
+        <div class="card shadow mb-4">
+            <div class="card-header py-3">
+                <h6 class="m-0 font-weight-bold text-primary">Tabla de Datos de Usuarios</h6>
+            </div>
+
+            <div class="container-responsive col-md-12">
+                <a href="/createUsers" class="btn btn-outline-primary mt-4">Nuevo</a>
+            </div>
+
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>NOMBRE</th>
+                                <th>NOMBRE DE CUENTA</th>
+                                <th>CONTRASEÑA</th>
+                                <th>CORREO</th>
+                                <th>ACCIONES</th>
+                            </tr>
+                        </thead>
+                        <tfoot>
+                            <tr>
+                                <th>ID</th>
+                                <th>NOMBRE</th>
+                                <th>NOMBRE DE CUENTA</th>
+                                <th>CONTRASEÑA</th>
+                                <th>CORREO</th>
+                                <th>ACCIONES</th>
+                            </tr>
+                        </tfoot>
+                        <tbody>
+
+                            <% resultados.forEach((usuarios)=> { %>
+                                <tr>
+                                    <td>
+                                        <%= usuarios.id %>
+                                    </td>
+                                    <td>
+                                        <%= usuarios.nombre %>
+                                    </td>
+                                    <td>
+                                        <%= usuarios.nom_cuenta %>
+                                    </td>
+                                    <td>
+                                        <%= usuarios.password %>
+                                    </td>
+                                    <td>
+                                        <%= usuarios.email %>
+                                    </td>
+                                    <td>
+                                        <a href="/editUsers/<%= usuarios.id %>" class="btn btn-outline-info"
+                                            data-toggle="modal" data-target="#editarModal">Editar</a>
+                                        <a href="/deleteUsers" class="btn btn-outline-danger">Eliminar</a>
+                                    </td>
+                                </tr>
+                                <% }) %>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- /.container-fluid -->
+    <!-- /.container-fluid -->
+
+    </div>
+    <!-- End of Main Content -->
+    <%- include templates/footer_dash.ejs %>
