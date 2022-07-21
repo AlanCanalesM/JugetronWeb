@@ -9,6 +9,7 @@ var loginRouter = require('./routes/login');
 var mainRouter = require('./routes/main');
 var serviciologin = require('./routes/serviciologin');
 var servicioRegistrar = require('./routes/servicioRegistrar');
+var dashboardusua = require('./routes/dashboardusua');
 //alan
 
 
@@ -17,6 +18,7 @@ var app = express();
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
+
 
 app.use(logger('dev'));
 app.use(bodyParser.urlencoded({extended:true}));
@@ -30,6 +32,7 @@ app.use('/serviciologin', serviciologin);
 app.use('/login', loginRouter);
 app.use('/main', mainRouter);
 app.use('/servicioRegistrar', servicioRegistrar);
+app.use('/dashboardusua', dashboardusua);
 
 
 // catch 404 and forward to error handler
