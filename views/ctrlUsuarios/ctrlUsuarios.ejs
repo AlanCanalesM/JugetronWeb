@@ -6,52 +6,6 @@
         <!-- Page Heading -->
         <h1 class="h3 mb-2 text-gray-800">Control de Usuarios</h1>
 
-        <!--Modal Editar-->
-        <div class="modal fade" id="editarModal" tabindex="-1" role="dialog" aria-labelledby="tituloVentana"
-            aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 id="tituloVentana">Editar Usuario</h5>
-                        <button class="close" data-dismiss="modal" aria-label="Cerrar">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="mb-3">
-                            <label class="form-label">Id</label>
-                            <input type="text" class="form-control" id="nombre" name="nombre" tabindex="1">
-                        </div>
-                        <div class="mb-3">
-                            <label class="form-label" id="lblNombre">Nombre Completo</label>
-                            <input type="text" class="form-control" id="nombre" name="nombre" tabindex="1">
-                        </div>
-                        <div class="mb-3">
-                            <label class="form-label" id="lblUser">UserName</label>
-                            <input type="text" class="form-control" id="nom_cuenta" name="nom_cuenta" tabindex="2">
-                        </div>
-                        <div class="mb-3">
-                            <label class="form-label" id="lblPass">Contraseña</label>
-                            <input type="password" class="form-control" id="password" name="password" tabindex="3">
-                        </div>
-                        <div class="mb-3">
-                            <label class="form-label" id="lblEmail">Correo e-mail</label>
-                            <input type="email" class="form-control" id="email" name="email" tabindex="4">
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button class="btn btn-outline-warning" type="button" data-dismiss="modal">
-                            Cerrar
-                        </button>
-                        <button class="btn btn-outline-info" type="button">
-                            Aceptar
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--End Modal Editar-->
-
         <!-- DataTales Example -->
         <div class="card shadow mb-4">
             <div class="card-header py-3">
@@ -107,16 +61,18 @@
                                     </td>
                                     <td>
                                         <div class="btn-group-vertical" role="group" aria-label="Vertical button group">
-                                            <form class="form-inline" method="get" action="/ctrlUsuarios/editar/<%= usuarios[usuario].id %>">
+                                            <form class="form-inline" method="get"
+                                                action="/ctrlUsuarios/editar/<%= usuarios[usuario].id %>">
                                                 <button class="btn btn-outline-info" type="submit">Editar</button>
                                             </form>
                                         </div>
                                         <div class="btn-group-vertical" role="group" aria-label="Vertical button group">
-                                            <form class="form-inline" method="post" action="/ctrlUsuarios/delete/<%= usuarios[usuario].id %>">
+                                            <form class="form-inline" method="post"
+                                                action="/ctrlUsuarios/delete/<%= usuarios[usuario].id %>">
                                                 <button class="btn btn-outline-danger" type="submit">Borrar</button>
                                             </form>
                                         </div>
-                                    </td>
+
                                 </tr>
                                 <% } %>
                         </tbody>
@@ -128,6 +84,7 @@
     </div>
     <!-- /.container-fluid -->
     <!-- /.container-fluid -->
+
 
 
     </div>

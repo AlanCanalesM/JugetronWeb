@@ -12,16 +12,14 @@ var pruebaRouter = require('./routes/prueba');
 var indexRouter = require('./routes/index');
 var loginRouter = require('./routes/login');
 var mainRouter = require('./routes/main');
-var serviciologin = require('./routes/serviciologin');
 var dashRouter = require('./routes/dashboard');
 var ctrlUsuariosRouter = require('./routes/ctrlUsuarios');
 var dashRouter = require('./routes/dashboard');
 var logout = require('./routes/logout');
-var servicioRegistrar = require('./routes/servicioRegistrar');
 const fs = require('fs');
 const { json } = require('body-parser');
-var obtenerUsuario = require('./routes/obtenerUsuario');
 var dashClientesRouter = require('./routes/dashboardUsuarios');
+var users = require('./routes/users');
 
 
 
@@ -47,19 +45,17 @@ app.use('/', indexRouter);
 app.use('/prueba', pruebaRouter);
 //end variable de prueba
 
-app.use('/serviciologin', serviciologin);
+app.use('/users', users);
 app.use('/login', loginRouter);
 app.use('/main', mainRouter);
 app.use('/dashboard', dashRouter);
 app.use('/ctrlUsuarios', ctrlUsuariosRouter);
 app.use('/main', mainRouter);
-app.use('/serviciologin', serviciologin);
 app.use('/login', loginRouter);
 app.use('/main', mainRouter);
-app.use('/servicioRegistrar', servicioRegistrar);
 app.use('/logout', logout);
-app.use('/obtenerUsuario', obtenerUsuario);
 app.use('/dashboardUsuarios', dashClientesRouter);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
