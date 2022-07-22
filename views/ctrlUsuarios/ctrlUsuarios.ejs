@@ -59,7 +59,7 @@
             </div>
 
             <div class="container-responsive col-md-12">
-                <a href="/createUsers" class="btn btn-outline-primary mt-4">Nuevo</a>
+                <a href="/ctrlUsuarios/createUsers" class="btn btn-outline-primary mt-4">Nuevo</a>
             </div>
 
             <div class="card-body">
@@ -87,30 +87,38 @@
                         </tfoot>
                         <tbody>
 
-                            <% resultados.forEach((usuarios)=> { %>
+                            <% for(let usuario=0; usuario < usuarios.length; usuario++) { %>
+
                                 <tr>
                                     <td>
-                                        <%= usuarios.id %>
+                                        <%= usuarios[usuario].id %>
                                     </td>
                                     <td>
-                                        <%= usuarios.nombre %>
+                                        <%= usuarios[usuario].nombre %>
                                     </td>
                                     <td>
-                                        <%= usuarios.nom_cuenta %>
+                                        <%= usuarios[usuario].nom_cuenta %>
                                     </td>
                                     <td>
-                                        <%= usuarios.password %>
+                                        <%= usuarios[usuario].password %>
                                     </td>
                                     <td>
-                                        <%= usuarios.email %>
+                                        <%= usuarios[usuario].email %>
                                     </td>
                                     <td>
-                                        <a href="/obtenerUsuario/<%= usuarios.nom_cuenta %>" class="btn btn-outline-info aLink"
-                                            data-toggle="modal" data-target="#editarModal" id="click">Editar</a>
-                                        <a href="/deleteUsers" class="btn btn-outline-danger">Eliminar</a>
+                                        <div class="btn-group-vertical" role="group" aria-label="Vertical button group">
+                                            <form class="form-inline" method="get" action="/ctrlUsuarios/editar/<%= usuarios[usuario].id %>">
+                                                <button class="btn btn-outline-info" type="submit">Editar</button>
+                                            </form>
+                                        </div>
+                                        <div class="btn-group-vertical" role="group" aria-label="Vertical button group">
+                                            <form class="form-inline" method="post" action="/ctrlUsuarios/delete/<%= usuarios[usuario].id %>">
+                                                <button class="btn btn-outline-danger" type="submit">Borrar</button>
+                                            </form>
+                                        </div>
                                     </td>
                                 </tr>
-                                <% }) %>
+                                <% } %>
                         </tbody>
                     </table>
                 </div>
@@ -120,10 +128,8 @@
     </div>
     <!-- /.container-fluid -->
     <!-- /.container-fluid -->
-  
+
 
     </div>
     <!-- End of Main Content -->
     <%- include templates/footer_dash.ejs %>
-
-  

@@ -1,6 +1,6 @@
 var express = require('express');
 const { response } = require('../app');
-const pool = require('../conexion/conexion');
+const pool = require('../config/conexion');
 var router = express.Router();
 
 //alan

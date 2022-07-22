@@ -7,7 +7,6 @@ var session = require('express-session');
 const bodyParser = require('body-parser');
 
 var pruebaRouter = require('./routes/prueba');
-var createUsersRouter = require('./routes/createUsers');
 
 // Ventanas
 var indexRouter = require('./routes/index');
@@ -21,10 +20,8 @@ var logout = require('./routes/logout');
 var servicioRegistrar = require('./routes/servicioRegistrar');
 const fs = require('fs');
 const { json } = require('body-parser');
-var servicioEditar = require('./routes/servicioEditar');
 var obtenerUsuario = require('./routes/obtenerUsuario');
-var dashUsuariosRouter = require('./routes/dashboardUsuarios');
-//alan
+var dashClientesRouter = require('./routes/dashboardUsuarios');
 
 
 
@@ -36,12 +33,11 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
 app.use(logger('dev'));
-app.use(bodyParser.urlencoded({extended:true}));
+app.use(bodyParser.urlencoded({extended:false}));
 app.use(bodyParser.json());
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(session({secret: '123456', resave: true, saveUninitialized: true}));
-
 app.use(express.urlencoded({extended:false}));
 app.use(express(json));
 
@@ -56,16 +52,14 @@ app.use('/login', loginRouter);
 app.use('/main', mainRouter);
 app.use('/dashboard', dashRouter);
 app.use('/ctrlUsuarios', ctrlUsuariosRouter);
-app.use('/createUsers', createUsersRouter);
 app.use('/main', mainRouter);
 app.use('/serviciologin', serviciologin);
 app.use('/login', loginRouter);
 app.use('/main', mainRouter);
 app.use('/servicioRegistrar', servicioRegistrar);
 app.use('/logout', logout);
-app.use('/servicioEditar', servicioEditar);
 app.use('/obtenerUsuario', obtenerUsuario);
-app.use('/dashboardUsuarios', dashUsuariosRouter);
+app.use('/dashboardUsuarios', dashClientesRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

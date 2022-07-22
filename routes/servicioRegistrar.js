@@ -1,5 +1,5 @@
 var express = require('express');
-const pool = require('../conexion/conexion');
+const pool = require('../config/conexion');
 var router = express.Router();
 const fs = require('fs');
 
