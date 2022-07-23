@@ -9,9 +9,10 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Dashboard Usuarios</title>
+    <title>Dashboard Clientes</title>
 
     <!-- Custom fonts for this template-->
+    <link href="/stylesheets/font-awesome.min.css" rel="stylesheet">
     <link href="/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link
         href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
@@ -20,7 +21,7 @@
     <!-- Custom styles for this template-->
     <link href="/stylesheets/sb-admin-2.min.css" rel="stylesheet">
     <link href="/stylesheets/bootstrap2.min.css" rel="stylesheet">
-    
+
 
 </head>
 
@@ -33,7 +34,7 @@
         <ul class="navbar-nav bg-gradient-danger sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/dashboard">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/dashboardUsuarios">
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-laugh-wink"></i>
                 </div>
@@ -45,7 +46,7 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item">
-                <a class="nav-link" href="/">
+                <a class="nav-link" href="/main">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Home</span></a>
             </li>
@@ -55,7 +56,7 @@
 
             <!-- Heading -->
             <div class="sidebar-heading">
-                Control de Usuarios
+                Control de Donaciones
             </div>
 
             <!-- Nav Item - Pages Collapse Menu -->
@@ -63,13 +64,13 @@
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
                     aria-expanded="true" aria-controls="collapseTwo">
                     <i class="fas fa-fw fa-cog"></i>
-                    <span>Usuarios</span>
+                    <span>Donar</span>
                 </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Opciones:</h6>
-                        <a class="collapse-item" href="/ctrlUsuarios">Usuarios Registrados</a>
-                        <a class="collapse-item" href="/ctrlUsuarios">Adminis Registrados</a>
+                        <a class="collapse-item" href="/dashboardUsuarios/clientesDonar">Donar un Juguete</a>
+                        <a class="collapse-item" href="/dashboardUsuarios/clientesDonar">Mis Donaciones</a>
                     </div>
                 </div>
             </li>
@@ -79,21 +80,18 @@
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
                     aria-expanded="true" aria-controls="collapseUtilities">
                     <i class="fas fa-fw fa-wrench"></i>
-                    <span>Utilities</span>
+                    <span>Mis Datos</span>
                 </a>
                 <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Custom Utilities:</h6>
-                        <a class="collapse-item" href="utilities-color.html">Colors</a>
-                        <a class="collapse-item" href="utilities-border.html">Borders</a>
-                        <a class="collapse-item" href="utilities-animation.html">Animations</a>
-                        <a class="collapse-item" href="utilities-other.html">Other</a>
+                        <h6 class="collapse-header">Panel de Visualización:</h6>
+                        <a class="collapse-item" href="utilities-color.html">Perfil</a>
                     </div>
                 </div>
             </li>
 
-            
+
 
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
@@ -161,7 +159,7 @@
                             </div>
                         </li>
 
-                        
+
 
                         <!-- Nav Item - User Information -->
                         <li class="nav-item dropdown no-arrow">
@@ -196,4 +194,5 @@
                     </ul>
 
                 </nav>
+
                 <!-- End of Topbar -->

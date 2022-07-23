@@ -1,10 +1,12 @@
+
 var express = require('express');
 var router = express.Router();
 
-/* GET sección page. (login.ejs) */
-router.get('/', function (req, res, next) {
-    res.render('dashboardUsuarios', { title: 'Usuarios' });
-});
+const clientesController = require("../controllers/clientesController");
+
+
+router.get('/', clientesController.clienteMain);
+router.get('/clientesDonar', clientesController.donar);
 
 
 module.exports = router;
