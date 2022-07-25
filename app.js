@@ -18,7 +18,7 @@ var dashRouter = require('./routes/dashboard');
 var logout = require('./routes/logout');
 const fs = require('fs');
 const { json } = require('body-parser');
-var dashClientesRouter = require('./routes/dashboardUsuarios');
+var dashClientesRouter = require('./routes/dashboardClientes');
 var users = require('./routes/users');
 
 
@@ -50,11 +50,10 @@ app.use('/login', loginRouter);
 app.use('/main', mainRouter);
 app.use('/dashboard', dashRouter);
 app.use('/ctrlUsuarios', ctrlUsuariosRouter);
-app.use('/main', mainRouter);
 app.use('/login', loginRouter);
 app.use('/main', mainRouter);
 app.use('/logout', logout);
-app.use('/dashboardUsuarios', dashClientesRouter);
+app.use('/dashboardClientes', dashClientesRouter);
 
 
 // catch 404 and forward to error handler
