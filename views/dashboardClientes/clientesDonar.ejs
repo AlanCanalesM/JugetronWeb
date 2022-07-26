@@ -1,0 +1,68 @@
+<%- include templates/dashUsuariosHeader.ejs %>
+    <div class="container-fluid">
+
+        <!-- Page Heading -->
+        <h1 class="h3 mb-2 text-gray-800">Hacer una Donación</h1>
+        <!-- DataTales Example -->
+        <div class="card shadow mb-4">
+
+            <div class="card-header py-3">
+                <h6 class="m-0 font-weight-bold text-primary">Donar un Juguete</h6>
+            </div>
+
+            <!-- Inicio Formularios col-md-12 mb-4 mt-4 -->
+            <form class="col-md-12 mb-4 mt-4">
+
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="exampleFormControlSelect1">Cantidad</label>
+                        <select class="form-control" id="exampleFormControlSelect1">
+                            <option selected>Elige una Cantidad de un mismo Juguete...</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="inputState">Color</label>
+                        <select id="inputState" class="form-control">
+                            <option selected>Elige un Color...</option>
+                            <option>...</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="inputState">Tipo de Juguete</label>
+                        <select id="inputState" class="form-control">
+                            <option selected>Elige un tipo...</option>
+                            <option>...</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="inputState">Clasificación</label>
+                        <select id="inputState" class="form-control">
+                            <option selected>Se clasifica como...</option>
+                            <option>...</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="exampleFormControlTextarea1">Descripción</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                </div>
+                <button type="submit" class="btn btn-outline-info" tabindex="5">Guardar</button>
+                <a href="/dashboardClientes" class="btn btn-outline-danger">Cancelar</a>
+            </form>
+        </div>
+
+
+    </div>
+    </div>
+
+
+
+    <%- include templates/dashUsuariosFooter.ejs %>

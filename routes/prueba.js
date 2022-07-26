@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-var db = require("../conexion/conexion");
+var db = require("../config/conexion");
 
 /* GET sección page. (login.ejs) */
 router.get('/', function (req, res, next) {

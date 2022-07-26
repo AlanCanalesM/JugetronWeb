@@ -1,0 +1,14 @@
+
+
+.icon-eye{
+    position: absolute;
+    right: 346px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    transition: 0.4s ease all;
+}
+
+.icon-eye:hover{
+    color: steelblue;
+}

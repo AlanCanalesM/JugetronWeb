@@ -1,0 +1,44 @@
+<%- include templates/header_dash.ejs %>
+    <div class="container-fluid">
+
+        <!-- Page Heading -->
+        <h1 class="h3 mb-2 text-gray-800">Control de Usuarios</h1>
+        <!-- DataTales Example -->
+        <div class="card shadow mb-4">
+
+            <div class="card-header py-3">
+                <h6 class="m-0 font-weight-bold text-primary">Editar Usuarios</h6>
+            </div>
+
+            <!-- Inicio Formularios -->
+            <form class="col-md-12 mb-4 mt-4" action="../actualizar" method="POST">
+                <input id="id" type="hidden" name="id" value="<%= usuario.id %>">
+                <div class="mb-3">
+                    <label class="form-label">Nombre Completo</label>
+                    <input type="text" class="form-control" id="nombre" name="nombre" value="<%= usuario.nombre %>"
+                        tabindex="1">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">UserName</label>
+                    <input type="text" class="form-control" id="nom_cuenta" name="nom_cuenta"
+                        value="<%= usuario.nom_cuenta %>" tabindex="2">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Contraseña</label>
+                    <input type="password" class="form-control" id="password" name="password"
+                        value="<%= usuario.password %>" tabindex="3">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Correo e-mail</label>
+                    <input type="email" class="form-control" id="email" name="email" value="<%= usuario.email %>"
+                        tabindex="4">
+                </div>
+                <button type="submit" class="btn btn-outline-info" tabindex="5">Guardar</button>
+                <a href="/ctrlUsuarios" class="btn btn-outline-danger">Cancelar</a>
+            </form>
+        </div>
+
+
+    </div>
+    </div>
+    <%- include templates/footer_dash.ejs %>
