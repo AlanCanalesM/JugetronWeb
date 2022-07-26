@@ -13,12 +13,11 @@ var pruebaRouter = require('./routes/prueba');
 // Ventanas
 var indexRouter = require('./routes/index');
 var loginRouter = require('./routes/login');
-var mainRouter = require('./routes/principal');
 var ctrlUsuariosRouter = require('./routes/dashboardAdmin');
-var mainRouter = require('./routes/main');
 var logout = require('./routes/logout');
 var dashClientesRouter = require('./routes/dashboardClientes');
 var users = require('./routes/users');
+var mainRouter = require('./routes/principal');
 
 
 
@@ -51,12 +50,13 @@ app.use('/', indexRouter);
 app.use('/prueba', pruebaRouter);
 //end variable de prueba
 app.use('/users', users);
-app.use('/principal', mainRouter);
 app.use('/login', loginRouter);
 app.use('/login', loginRouter);
 app.use('/logout', logout);
 app.use('/dashboardClientes', dashClientesRouter);
 app.use('/dashboardAdmin', ctrlUsuariosRouter);
+app.use('/principal', mainRouter);
+
 
 
 // catch 404 and forward to error handler

@@ -25,8 +25,16 @@
                 </div>
                 <div class="mb-3">
                     <label class="form-label">Contraseña</label>
-                    <input type="password" class="form-control" id="password" name="password"
-                        value="<%= usuario.password %>" tabindex="3">
+                    <div class="col-sm-13">
+                        <div class="input-group">
+                            <input ID="password" type="password" Class="form-control" name="password" value="<%= usuario.password %>" tabindex="3">
+                            <div class="input-group-append">
+                                <button id="show_password" class="btn btn-primary" type="button" onclick="showPass()">
+                                    <span class="fa fa-eye-slash icon"></span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="mb-3">
                     <label class="form-label">Correo e-mail</label>
@@ -34,7 +42,7 @@
                         tabindex="4">
                 </div>
                 <button type="submit" class="btn btn-outline-info" tabindex="5">Guardar</button>
-                <a href="/ctrlUsuarios" class="btn btn-outline-danger">Cancelar</a>
+                <a href="/dashboardAdmin/ctrlUsuarios" class="btn btn-outline-danger">Cancelar</a>
             </form>
         </div>
 
