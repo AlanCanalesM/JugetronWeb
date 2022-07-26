@@ -76,7 +76,11 @@ router.post('/servicioLogin', (request, response) => {
         /*response.redirect("http://localhost:3000/");*/
         request.session.nombre=request.body.nom_cuenta;
     
+<<<<<<< HEAD
         response.render('principal', { nombre: request.session.nombre });
+=======
+        response.render('main', { nombre: request.session.nombre });
+>>>>>>> 8abb40be1b70be16c8d0afcd98ef839f7c2ec6b1
      
       }else{
         response.send("Credenciales erroneas");
