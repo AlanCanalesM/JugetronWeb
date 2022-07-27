@@ -50,10 +50,20 @@
                         </select>
                     </div>
                 </div>
-                <div class="form-group">
-                    <label for="exampleFormControlTextarea1">Descripción</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="exampleFormControlTextarea1">Descripción</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="inputState">Lugar de entrega</label>
+                        <select id="inputState" class="form-control">
+                            <option selected>Ubicación...</option>
+                            <option>...</option>
+                        </select>
+                    </div>
                 </div>
+
                 <button type="submit" class="btn btn-outline-info" tabindex="5">Guardar</button>
                 <a href="/dashboardClientes" class="btn btn-outline-danger">Cancelar</a>
             </form>
