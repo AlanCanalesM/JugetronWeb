@@ -1,0 +1,66 @@
+<%- include ../templates/header_dash.ejs %>
+    <div class="container-fluid">
+
+        <!-- Page Heading -->
+
+        <!-- DataTales Example -->
+        <div class="card shadow mb-4">
+            <div class="card-header py-3">
+                <h4 class="m-0 font-weight-bold " style="color: #293a4a;">Clasificaciones</h4>
+            </div>
+            <div class="container-responsive col-md-12">
+                <a href="/dashboardAdmin/createUsers" class="btn btn-outline-primary mt-4">Nueva Clasificación</a>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>DESCRIPCIÓN</th>
+                                <th>ACCIONES</th>
+                            </tr>
+                        </thead>
+                        <tfoot>
+                            <tr>
+                                <th>ID</th>
+                                <th>DESCRIPCIÓN</th>
+                                <th>ACCIONES</th>
+                            </tr>
+                        </tfoot>
+                        <tbody>
+
+
+
+                            <tr>
+                                <td>
+
+                                </td>
+                                <td>
+
+                                </td>
+
+                                </td>
+                                <td>
+                                    <div class="btn-group-vertical" role="group" aria-label="Vertical button group">
+                                        <form class="form-inline" method="get" action="/dashboardAdmin/editar/">
+                                            <button class="btn btn-outline-info" type="submit">Editar</button>
+                                        </form>
+                                    </div>
+                                    <div class="btn-group-vertical" role="group" aria-label="Vertical button group">
+                                        <form class="form-inline" method="post" action="/dashboardAdmin/delete/%>">
+                                            <button class="btn btn-outline-danger" type="submit">Borrar</button>
+                                        </form>
+                                    </div>
+
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    </div>
+    <%- include ../templates/footer_dash.ejs %>

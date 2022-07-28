@@ -56,5 +56,25 @@ module.exports = {
     },
     perfilAdmin: function (req, res) {
         res.render('dashboardAdmin/perfil');
-    }
+    },
+
+    //##############Logistica de Negocio#########################
+    //############Contenedores###########
+    contenedores: function (req, res) {
+        res.render('dashboardAdmin/contenedores/contenedores');
+    },
+    direcciones: function (req, res) {
+        res.render('dashboardAdmin/contenedores/direcciones');
+    },
+    //############Juguetes###########
+    color: function (req, res) {
+        res.render('dashboardAdmin/juguetes/color');
+    },
+    identificacion: function (req, res) {
+        res.render('dashboardAdmin/juguetes/identificacion');
+    },
+    clasificacion: function (req, res) {
+        res.render('dashboardAdmin/juguetes/clasificacion');
+    },
+
 }
