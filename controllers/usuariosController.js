@@ -43,7 +43,7 @@ module.exports = {
 
     actualizar: function (req, res) {
         console.log(req.body.nombre);
-        console.log(req.body.nom_cuenta);
+        console.log(req.body.username);
         console.log(req.body.password);
         console.log(req.body.email);
         if (req.body.nombre) {
