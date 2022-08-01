@@ -29,12 +29,13 @@
                             </tr>
                         </tfoot>
                         <tbody>
+                            <% for(let ubicacion=0; ubicacion < contenedor.length; ubicacion++) { %>
                             <tr>
                                 <td>
-
+                                    <%= contenedor[ubicacion].id_ubi %>
                                 </td>
                                 <td>
-
+                                    <%= contenedor[ubicacion].descripcion %>
                                 </td>
                                 <td>
                                     <div class="btn-group-vertical" role="group" aria-label="Vertical button group">
@@ -43,13 +44,13 @@
                                         </form>
                                     </div>
                                     <div class="btn-group-vertical" role="group" aria-label="Vertical button group">
-                                        <form class="form-inline" method="post" action="/dashboardAdmin/delete/%>">
+                                        <form class="form-inline" method="post" action="/dashboardAdmin/delete/">
                                             <button class="btn btn-outline-danger" type="submit">Borrar</button>
                                         </form>
                                     </div>
 
                             </tr>
-
+                            <% } %>
                         </tbody>
                     </table>
                 </div>

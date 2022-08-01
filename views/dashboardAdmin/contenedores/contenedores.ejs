@@ -12,10 +12,11 @@
                 <a href="/dashboardAdmin/createUsers" class="btn btn-outline-primary mt-4">Nuevo Contenedor</a>
             </div>
             <div class="card-body">
-                
+
                 <div class="table-responsive">
                     <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                         <thead>
+
                             <tr>
                                 <th>ID</th>
                                 <th>UBICACIÓN</th>
@@ -30,33 +31,35 @@
                             </tr>
                         </tfoot>
                         <tbody>
-                            <tr>
-                                <td>
+                            
+                            <% for(let contenedores=0; contenedores < contenedor.length; contenedores++) { %>
+                                <tr>
+                                    <td>
+                                       <%= contenedor[contenedores].id_cont %>
+                                    </td>
+                                    <td>
+                                        <%= contenedor[contenedores].descripcion %>
+                                    </td>
+                                    <td>
+                                        <div class="btn-group-vertical" role="group" aria-label="Vertical button group">
+                                            <form class="form-inline" method="get" action="/dashboardAdmin/editar/">
+                                                <button class="btn btn-outline-info" type="submit">Editar</button>
+                                            </form>
+                                        </div>
+                                        <div class="btn-group-vertical" role="group" aria-label="Vertical button group">
+                                            <form class="form-inline" method="post" action="/dashboardAdmin/delete/">
+                                                <button class="btn btn-outline-danger" type="submit">Borrar</button>
+                                            </form>
+                                        </div>
 
-                                </td>
-                                <td>
-
-                                </td>
-                                <td>
-                                    <div class="btn-group-vertical" role="group" aria-label="Vertical button group">
-                                        <form class="form-inline" method="get" action="/dashboardAdmin/editar/">
-                                            <button class="btn btn-outline-info" type="submit">Editar</button>
-                                        </form>
-                                    </div>
-                                    <div class="btn-group-vertical" role="group" aria-label="Vertical button group">
-                                        <form class="form-inline" method="post" action="/dashboardAdmin/delete/%>">
-                                            <button class="btn btn-outline-danger" type="submit">Borrar</button>
-                                        </form>
-                                    </div>
-
-                            </tr>
-
+                                </tr>
+                                <% } %>
                         </tbody>
                     </table>
                 </div>
             </div>
         </div>
 
-</div>
+    </div>
     </div>
     <%- include ../templates/footer_dash.ejs %>

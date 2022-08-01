@@ -1,5 +1,6 @@
 var conexion = require("../config/conexion");
 var usuarios = require("../model/usuariosModel");
+var contenedor = require("../model/juguetesModel");
 
 module.exports = {
     index: function (req, res) {
@@ -9,7 +10,6 @@ module.exports = {
     control: function (req, res) {
 
         usuarios.obtener(conexion, function (err, datos) {
-            console.log(datos);
             res.render('dashboardAdmin/ctrlUsuarios', { usuarios: datos });
 
         });
@@ -40,7 +40,6 @@ module.exports = {
         });
 
     },
-
     actualizar: function (req, res) {
         console.log(req.body.nombre);
         console.log(req.body.username);
@@ -61,10 +60,16 @@ module.exports = {
     //##############Logistica de Negocio#########################
     //############Contenedores###########
     contenedores: function (req, res) {
-        res.render('dashboardAdmin/contenedores/contenedores');
+        contenedor.obtContenedor(conexion, function (err, data) {
+            res.render('dashboardAdmin/contenedores/contenedores', { contenedor: data });
+
+        })
     },
     direcciones: function (req, res) {
-        res.render('dashboardAdmin/contenedores/direcciones');
+        contenedor.obtUbicacion(conexion, function (err, datos) {
+            res.render('dashboardAdmin/contenedores/direcciones', { contenedor: datos });
+        })
+
     },
     //############Juguetes###########
     color: function (req, res) {
