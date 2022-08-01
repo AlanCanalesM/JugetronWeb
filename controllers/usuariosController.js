@@ -16,9 +16,7 @@ module.exports = {
 
     },
     create: function (req, res) {
-
         res.render('dashboardAdmin/createUsers');
-
     },
     register: function (req, res) {
         usuarios.insertar(conexion, req.body, function (err) {
@@ -37,7 +35,6 @@ module.exports = {
             console.log(registros[0]);
             res.render('dashboardAdmin/editUsers', { usuario: registros[0] });
         });
-
     },
     actualizar: function (req, res) {
         console.log(req.body.nombre);
@@ -72,21 +69,6 @@ module.exports = {
     registerContenedor: function (req, res) {
 
         res.send(req.body);
-       /*
-        console.log(req.body);
-
-        juguetes.insertarContenedor(conexion,req.body, function (err, datos){
-            res.redirect('dashboardAdmin/contenedores/contenedores')
-        });
-       
-        
-        juguetes.insertarContenedor(conexion, req.body, function (err) {
-            console.log(req.body.id_cont);
-            console.log(req.body.nombre);
-            console.log(req.body.id_ubi);
-           // res.redirect('/dashboardAdmin/contenedores');
-        });
-        */
     },
     direcciones: function (req, res) {
         juguetes.obtUbicacion(conexion, function (err, datos) {

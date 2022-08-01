@@ -20,9 +20,10 @@ router.get('/createContenedores', usuariosController.createContenedores);
 router.post("/prueba", (request, response)=>{
 
     const nombre = request.body.nombre;
-    const ubicacion = request.body.id_ubi;
+    const id_ubi = request.body.id_ubi;
+    const id_cont = request.body.id_con;
 
-    pool.query("INSERT INTO contenedor (id_ubi, nombre) VALUES (?,?)", [ubicacion, nombre], (error, result)=>{
+    pool.query("INSERT INTO contenedor (id_cont, nombre, id_ubi) VALUES (?,?,?)", [id_cont, nombre, id_ubi], (error, result)=>{
 
         if(error) throw error;
 
