@@ -22,7 +22,7 @@ module.exports = {
     },
     register: function (req, res) {
         usuarios.insertar(conexion, req.body, function (err) {
-            res.redirect('/dashboardAdmin/ctrlUsuarios');
+            res.send(req.params);
         });
     },
     eliminar: function (req, res) {
