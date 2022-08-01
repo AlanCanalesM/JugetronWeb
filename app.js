@@ -8,7 +8,7 @@ const bodyParser = require('body-parser');
 const fs = require('fs');
 const { json } = require('body-parser');
 
-var pruebaRouter = require('./routes/prueba');
+
 
 // Ventanas
 var indexRouter = require('./routes/index');
@@ -47,7 +47,7 @@ app.use(express(json));
 // ----------------Paginación------------------------//
 app.use('/', indexRouter);
 //variable de prueba
-app.use('/prueba', pruebaRouter);
+//app.use('/prueba', pruebaRouter);
 //end variable de prueba
 app.use('/users', users);
 app.use('/login', loginRouter);

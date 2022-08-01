@@ -29,32 +29,30 @@
                             </tr>
                         </tfoot>
                         <tbody>
+                            <% for(let clas=0; clas < juguetes.length; clas++) { %>
+                                <tr>
+                                    <td>
+                                        <%= juguetes[clas].id_clas %>
+                                    </td>
+                                    <td>
+                                        <%= juguetes[clas].descripcion %>
+                                    </td>
 
+                                    </td>
+                                    <td>
+                                        <div class="btn-group-vertical" role="group" aria-label="Vertical button group">
+                                            <form class="form-inline" method="get" action="/dashboardAdmin/editar/">
+                                                <button class="btn btn-outline-info" type="submit">Editar</button>
+                                            </form>
+                                        </div>
+                                        <div class="btn-group-vertical" role="group" aria-label="Vertical button group">
+                                            <form class="form-inline" method="post" action="/dashboardAdmin/delete/%>">
+                                                <button class="btn btn-outline-danger" type="submit">Borrar</button>
+                                            </form>
+                                        </div>
 
-
-                            <tr>
-                                <td>
-
-                                </td>
-                                <td>
-
-                                </td>
-
-                                </td>
-                                <td>
-                                    <div class="btn-group-vertical" role="group" aria-label="Vertical button group">
-                                        <form class="form-inline" method="get" action="/dashboardAdmin/editar/">
-                                            <button class="btn btn-outline-info" type="submit">Editar</button>
-                                        </form>
-                                    </div>
-                                    <div class="btn-group-vertical" role="group" aria-label="Vertical button group">
-                                        <form class="form-inline" method="post" action="/dashboardAdmin/delete/%>">
-                                            <button class="btn btn-outline-danger" type="submit">Borrar</button>
-                                        </form>
-                                    </div>
-
-                            </tr>
-
+                                </tr>
+                                <% } %>
                         </tbody>
                     </table>
                 </div>

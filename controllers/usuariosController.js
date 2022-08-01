@@ -1,6 +1,6 @@
 var conexion = require("../config/conexion");
 var usuarios = require("../model/usuariosModel");
-var contenedor = require("../model/juguetesModel");
+var juguetes = require("../model/juguetesModel");
 
 module.exports = {
     index: function (req, res) {
@@ -21,7 +21,6 @@ module.exports = {
 
     },
     register: function (req, res) {
-        console.log(req.body);
         usuarios.insertar(conexion, req.body, function (err) {
             res.redirect('/dashboardAdmin/ctrlUsuarios');
         });
@@ -60,26 +59,60 @@ module.exports = {
     //##############Logistica de Negocio#########################
     //############Contenedores###########
     contenedores: function (req, res) {
-        contenedor.obtContenedor(conexion, function (err, data) {
-            res.render('dashboardAdmin/contenedores/contenedores', { contenedor: data });
+        juguetes.obtContenedor(conexion, function (err, data) {
+            res.render('dashboardAdmin/contenedores/contenedores', { juguetes: data });
 
         })
+    },
+    createContenedores: function (req, res) {
+        juguetes.obtUbicacion(conexion, function (err, datos) {
+            res.render('dashboardAdmin/contenedores/createContenedor', { juguetes: datos });
+        });
+    },
+    registerContenedor: function (req, res) {
+
+        res.send(req.body);
+       /*
+        console.log(req.body);
+
+        juguetes.insertarContenedor(conexion,req.body, function (err, datos){
+            res.redirect('dashboardAdmin/contenedores/contenedores')
+        });
+       
+        
+        juguetes.insertarContenedor(conexion, req.body, function (err) {
+            console.log(req.body.id_cont);
+            console.log(req.body.nombre);
+            console.log(req.body.id_ubi);
+           // res.redirect('/dashboardAdmin/contenedores');
+        });
+        */
     },
     direcciones: function (req, res) {
-        contenedor.obtUbicacion(conexion, function (err, datos) {
-            res.render('dashboardAdmin/contenedores/direcciones', { contenedor: datos });
+        juguetes.obtUbicacion(conexion, function (err, datos) {
+            res.render('dashboardAdmin/contenedores/direcciones', { juguetes: datos });
         })
 
     },
+    
     //############Juguetes###########
     color: function (req, res) {
-        res.render('dashboardAdmin/juguetes/color');
+        juguetes.obtColor(conexion, function (err, datos) {
+            res.render('dashboardAdmin/juguetes/color', {juguetes: datos});
+        })
+        
     },
     identificacion: function (req, res) {
-        res.render('dashboardAdmin/juguetes/identificacion');
+        juguetes.obtIdentificacion(conexion, function (err, datos) {
+            res.render('dashboardAdmin/juguetes/identificacion', {juguetes: datos});
+        })
+        
     },
     clasificacion: function (req, res) {
-        res.render('dashboardAdmin/juguetes/clasificacion');
+        juguetes.obtClasificacion(conexion, function (err, datos) {
+            res.render('dashboardAdmin/juguetes/clasificacion', {juguetes: datos});
+        })
+        
     },
 
 }

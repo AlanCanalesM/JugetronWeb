@@ -9,7 +9,7 @@
                 <h4 class="m-0 font-weight-bold " style="color: #293a4a;">Contenedores</h4>
             </div>
             <div class="container-responsive col-md-12">
-                <a href="/dashboardAdmin/createUsers" class="btn btn-outline-primary mt-4">Nuevo Contenedor</a>
+                <a href="/dashboardAdmin/createContenedores" class="btn btn-outline-primary mt-4">Nuevo Contenedor</a>
             </div>
             <div class="card-body">
 
@@ -19,6 +19,7 @@
 
                             <tr>
                                 <th>ID</th>
+                                <th>NOMBRE</th>
                                 <th>UBICACIÓN</th>
                                 <th>ACCIONES</th>
                             </tr>
@@ -26,19 +27,23 @@
                         <tfoot>
                             <tr>
                                 <th>ID</th>
+                                <th>NOMBRE</th>
                                 <th>UBICACIÓN</th>
                                 <th>ACCIONES</th>
                             </tr>
                         </tfoot>
                         <tbody>
                             
-                            <% for(let contenedores=0; contenedores < contenedor.length; contenedores++) { %>
+                            <% for(let contenedores=0; contenedores < juguetes.length; contenedores++) { %>
                                 <tr>
                                     <td>
-                                       <%= contenedor[contenedores].id_cont %>
+                                       <%= juguetes[contenedores].id_cont %>
                                     </td>
                                     <td>
-                                        <%= contenedor[contenedores].descripcion %>
+                                        <%= juguetes[contenedores].nombre %>
+                                    </td>
+                                    <td>
+                                        <%= juguetes[contenedores].descripcion %>
                                     </td>
                                     <td>
                                         <div class="btn-group-vertical" role="group" aria-label="Vertical button group">

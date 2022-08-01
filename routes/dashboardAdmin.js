@@ -12,8 +12,11 @@ router.post('/delete/:id', usuariosController.eliminar);
 router.get('/editar/:id', usuariosController.editar);
 router.post('/actualizar', usuariosController.actualizar);
 router.get('/perfil', usuariosController.perfilAdmin);
+
 //##############Logistica de Negocio#################
 router.get('/contenedores', usuariosController.contenedores);
+router.get('/createContenedores', usuariosController.createContenedores);
+router.post("/", usuariosController.registerContenedor);
 router.get('/direcciones', usuariosController.direcciones);
 router.get('/color', usuariosController.color);
 router.get('/identificacion', usuariosController.identificacion);

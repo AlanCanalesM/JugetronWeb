@@ -29,15 +29,13 @@
                             </tr>
                         </tfoot>
                         <tbody>
-
-
-
+                            <% for(let iden=0; iden < juguetes.length; iden++) { %>
                             <tr>
                                 <td>
-
+                                    <%= juguetes[iden].id_iden %>
                                 </td>
                                 <td>
-
+                                    <%= juguetes[iden].descripcion %>
                                 </td>
                                 </td>
                                 <td>
@@ -53,7 +51,7 @@
                                     </div>
 
                             </tr>
-
+                            <% } %>
                         </tbody>
                     </table>
                 </div>
