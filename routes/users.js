@@ -100,7 +100,7 @@ router.get('/tipousuario', (request, response) =>{
     
   })
 })
-
+//ggg
 
 
 module.exports = router;
