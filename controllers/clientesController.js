@@ -8,9 +8,15 @@ module.exports = {
     },
 
     donar: function (req, res) {
-        donaciones.obtUbicacion(conexion, function (err, datos) {
+        /*
+        donaciones.obtCaracteristicas(conexion, function (err, datos) {
             res.render('dashboardClientes/clientesDonar', { donaciones: datos });
         })
+        */
+        donaciones.obtCaracteristicas(conexion, function (err, datos) {
+            res.render('dashboardClientes/clientesDonar', { donaciones: datos });
+        })
+
     },
 
     misDonaciones: function (req, res) {

@@ -18,9 +18,10 @@
                         <label for="inputState">Lugar de entrega</label>
                         <select id="inputState" class="form-control">
                             <option selected>Elige una contenedor de entrega......</option>
-                            <% for(let ubicacion=0; ubicacion < donaciones.length; ubicacion++) { %>
+                            <% for(let ubi=0; ubi < ubicacion.length; ubi++) { %>
                                 <option>
-                                    <%= donaciones[ubicacion].descripcion%>
+                                    <%= ubicacion[ubi].id_ubi%>
+                                        <%= ubicacion[ubi].descripcion%>
                                 </option>
                                 <%}%>
 
@@ -46,9 +47,10 @@
                         <label for="inputState">Tipo de Juguete</label>
                         <select id="inputState" class="form-control">
                             <option selected>Elige un tipo...</option>
-                            <% for(let Iden=0; Iden < donaciones.length; Iden++) { %>
+                            <% for(let Iden=0; Iden < identificacion.length; Iden++) { %>
                                 <option>
-                                    <%= donaciones[Iden].descripcionIden%>
+                                    <%= identificacion[Iden].id_iden%>
+                                        <%= identificacion[Iden].descripcionIden%>
                                 </option>
                                 <%}%>
                         </select>
@@ -57,9 +59,10 @@
                         <label for="inputState">Clasificación</label>
                         <select id="inputState" class="form-control">
                             <option selected>Se clasifica como...</option>
-                            <% for(let ubicacion=0; ubicacion < donaciones.length; ubicacion++) { %>
+                            <% for(let clas=0; clas < clasificacion.length; clas++) { %>
                                 <option>
-                                    <%= donaciones[ubicacion].Clasificacion%>
+                                    <%= clasificacion[clas].id_clas%>
+                                    <%= clasificacion[clas].descripcionClas%>
                                 </option>
                                 <%}%>
                         </select>
@@ -68,7 +71,12 @@
                         <label for="inputState">Color</label>
                         <select id="inputState" class="form-control">
                             <option selected>Elige un Color...</option>
-                            <option>...</option>
+                            <% for(let col=0; col < color.length; col++) { %>
+                            <option>
+                                <%= color[col].id_color%>
+                                    <%= color[col].descripcion%>
+                            </option>
+                            <%}%>
                         </select>
                     </div>
                 </div>
