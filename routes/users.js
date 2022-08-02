@@ -1,3 +1,4 @@
+const { response } = require('express');
 var express = require('express');
 const pool = require('../config/conexion');
 var router = express.Router();
@@ -66,7 +67,6 @@ router.post('/servicioRegistrar', (request, response) => {
 router.post('/servicioLogin', (request, response) => {
   const username = request.body.username;
   const password = request.body.password;
-
   pool.query("SELECT * FROM usuarios WHERE username=? and password=?", [username, password], (error, result) => {
     if (error) throw error;
 
@@ -84,6 +84,22 @@ router.post('/servicioLogin', (request, response) => {
   });
 });
 
+router.get('/tipousuario', (request, response) =>{
+  const username = request.session.nombre;
+
+  pool.query("SELECT id_tuser from usuarios WHERE username=?", [username], (error, result)=>{
+    if(error) throw error;
+
+    if(result[0].id_tuser==1){
+
+      response.render('dashboardAdmin/dashboard', {nombre:request.session.nombre});
+    }else{
+      response.render('dashboardClientes/dashboardClientes', {nombre:request.session.nombre});
+    }
+    
+  })
+})
+//ggg
 
 
 module.exports = router;

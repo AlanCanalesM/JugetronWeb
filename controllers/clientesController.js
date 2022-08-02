@@ -2,9 +2,11 @@ var conexion = require("../config/conexion");
 var donaciones = require("../model/juguetesModel");
 const { identificacion } = require("./usuariosController");
 
+//dfsdf
+
 module.exports = {
     clienteMain: function (req, res) {
-        res.render('dashboardClientes/dashboardClientes');
+        res.render('dashboardClientes/dashboardClientes', {nombre:req.session.nombre});
     },
 
     donar: function (req, res) {
