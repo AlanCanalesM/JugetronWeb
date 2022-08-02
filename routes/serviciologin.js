@@ -8,7 +8,7 @@ router.post('/', (request, response) => {
   const nom_cuenta= request.body.nom_cuenta;
   const password= request.body.password;
   
-      pool.query("SELECT * FROM usuarios WHERE nom_cuenta=? and password=?",[nom_cuenta,password], (error, result) => {
+      pool.query("SELECT * FROM usuarios WHERE username=? and password=?",[nom_cuenta,password], (error, result) => {
       if (error) throw error;
 
       //response.status(200).send((result[0].id).toString());

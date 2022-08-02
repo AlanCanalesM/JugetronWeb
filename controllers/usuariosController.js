@@ -4,7 +4,7 @@ var juguetes = require("../model/juguetesModel");
 
 module.exports = {
     index: function (req, res) {
-        res.render('dashboardAdmin/dashboard');
+        res.render('dashboardAdmin/dashboard', {nombre: req.session.nombre});
     },
 
     control: function (req, res) {
