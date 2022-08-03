@@ -26,9 +26,6 @@ module.exports = {
     obtCar: function (conexion, funcion) {
         conexion.query("SELECT DISTINCT clas.descripcionClas, iden.descripcionIden, col.descripcion, u.descripcion FROM clasificacion as clas, identificacion as iden, color as col, ubicacion as u", funcion);
     },
-    obtCaracteristicas: function (consulta1, consulta2, consulta3, consulta4, funcion) {
-        consulta1 = conexion.query("SELECT * FROM ubicacion", funcion);
-        consulta2 = conexion.query("SELECT * FROM identificacion", funcion);
-    },
+   
 
 }

@@ -9,7 +9,7 @@ router.get('/servicioObtenerUsuario/:username', (request, response) => {
 
   username = request.params.username;
 
-  pool.query("SELECT * FROM usuarios WHERE nom_cuenta=?", username, (error, result) => {
+  pool.query("SELECT * FROM usuarios WHERE username=?", username, (error, result) => {
 
 
     if (error) throw error;

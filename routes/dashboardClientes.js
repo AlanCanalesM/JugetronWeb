@@ -27,5 +27,6 @@ router.get('/clientesDonar', (req, res) => {
 });
 router.get('/misDonaciones', clientesController.misDonaciones);
 router.get('/perfil', clientesController.perfilCliente);
+router.post('/misDonaciones', clientesController.registerDon);
 
 module.exports = router;

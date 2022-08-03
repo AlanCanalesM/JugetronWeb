@@ -4,24 +4,25 @@
         <!-- Page Heading -->
 
         <!-- DataTales Example -->
-        <div class="card shadow mb-4">
+        <div class="card shadow mt-7 mb-4">
 
             <div class="card-header py-3">
                 <h4 class="m-0 font-weight-bold text-danger">Donar un Juguete</h4>
             </div>
 
             <!-- Inicio Formularios col-md-12 mb-4 mt-4 -->
-            <form class="col-md-12 mb-4 mt-4">
+            <form class="col-md-12 mb-4 mt-4" action="/dashboardClientes/misDonaciones" method="POST">
 
                 <div class="form-row">
                     <div class="form-group col-md-6">
                         <label for="inputState">Lugar de entrega</label>
-                        <select id="inputState" class="form-control">
+                        <select id="id_cont" name="id_cont" class="form-control">
                             <option selected>Elige una contenedor de entrega......</option>
                             <% for(let ubi=0; ubi < ubicacion.length; ubi++) { %>
                                 <option>
                                     <%= ubicacion[ubi].id_ubi%>
-                                        <%= ubicacion[ubi].descripcion%>
+                                    <%= ubicacion[ubi].descripcion%>
+                                       <!----> 
                                 </option>
                                 <%}%>
 
@@ -30,7 +31,7 @@
 
                     <div class="form-group col-md-6">
                         <label for="exampleFormControlSelect1">Cantidad</label>
-                        <select class="form-control" id="exampleFormControlSelect1">
+                        <select class="form-control" id="cantidad" name="cantidad">
                             <option selected>Elige una Cantidad de un mismo Juguete...</option>
                             <option>1</option>
                             <option>2</option>
@@ -45,36 +46,36 @@
                 <div class="form-row">
                     <div class="form-group col-md-6">
                         <label for="inputState">Tipo de Juguete</label>
-                        <select id="inputState" class="form-control">
+                        <select id="id_iden" name="id_iden" class="form-control">
                             <option selected>Elige un tipo...</option>
                             <% for(let Iden=0; Iden < identificacion.length; Iden++) { %>
                                 <option>
                                     <%= identificacion[Iden].id_iden%>
-                                        <%= identificacion[Iden].descripcionIden%>
+                                      <!--<%= identificacion[Iden].descripcionIden%>-->  
                                 </option>
                                 <%}%>
                         </select>
                     </div>
                     <div class="form-group col-md-4">
                         <label for="inputState">Clasificación</label>
-                        <select id="inputState" class="form-control">
+                        <select id="id_clas" name="id_clas" class="form-control">
                             <option selected>Se clasifica como...</option>
                             <% for(let clas=0; clas < clasificacion.length; clas++) { %>
                                 <option>
                                     <%= clasificacion[clas].id_clas%>
-                                    <%= clasificacion[clas].descripcionClas%>
+                                   <!--<%= clasificacion[clas].descripcionClas%>--> 
                                 </option>
                                 <%}%>
                         </select>
                     </div>
                     <div class="form-group col-md-2">
                         <label for="inputState">Color</label>
-                        <select id="inputState" class="form-control">
+                        <select id="id_color" name="id_color" class="form-control">
                             <option selected>Elige un Color...</option>
                             <% for(let col=0; col < color.length; col++) { %>
                             <option>
                                 <%= color[col].id_color%>
-                                    <%= color[col].descripcion%>
+                                   <!--<%= color[col].descripcion%>--> 
                             </option>
                             <%}%>
                         </select>
@@ -83,7 +84,7 @@
                 <div class="form-row">
                     <div class="form-group col-md-12">
                         <label for="exampleFormControlTextarea1">Descripción</label>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                        <textarea class="form-control" id="descripcion" name="descripcion" rows="3"></textarea>
                     </div>
 
                 </div>
