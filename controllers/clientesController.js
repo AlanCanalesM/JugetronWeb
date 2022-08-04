@@ -20,24 +20,19 @@ module.exports = {
     registerDon: function (req, res) {
         //res.send(req.body);
         //res.send(req.body);
-        
-        donar.insertarDon(conexion,req.body, function (err, result) {
+       
+
+        donar.insertarDon(conexion,req.body, req.session.idusu, function (err, result) {
 
             
             res.redirect("/dashboardClientes/misDonaciones");
-            
+            //res.send(result);
         });
     },
 
     misDonaciones: function (req, res) {
-<<<<<<< HEAD
 
-        donar.obtDonaciones(conexion, function (err, datos) {
-=======
-        
-        const nombres=req.session.nombre;
-        donar.obtDonaciones(conexion, nombres ,function (err, datos) {
->>>>>>> d2707cc2337e8cd60acadbcf21ed67826066656c
+        donar.obtDonaciones(conexion, req.session.idusu,function (err, datos) {
             console.log(datos);
             res.render('dashboardClientes/misDonaciones', { donar: datos, nombre:req.session.nombre });
         });

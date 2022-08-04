@@ -75,6 +75,7 @@ router.post('/servicioLogin', (request, response) => {
 
       /*response.redirect("http://localhost:3000/");*/
       request.session.nombre = request.body.username;
+      request.session.idusu=result[0].id.toString();
       response.render('principal/mainUsuarios', { nombre: request.session.nombre });
 
     } else {

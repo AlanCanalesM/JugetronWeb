@@ -3,13 +3,13 @@ const { query } = require("express");
 var conexion = require("../config/conexion");
 module.exports={
 
-    insertarDon: function (conexion, datos , funcion) {
-       //conexion.query("SELECT id FROM usuarios WHERE username=1");
-        conexion.query("INSERT INTO donacion(id_cont, descripcion, id_color, id_iden, id_clas, cantidad) VALUES (?,?,?,?,?,?)",[datos.id_cont, datos.descripcion,datos.id_color, datos.id_iden, datos.id_clas, datos.cantidad], funcion);
+    insertarDon: function (conexion, datos , idusu, funcion) {
+        
+        conexion.query("INSERT INTO donacion(id_cont, descripcion, id_color, id_iden, id_clas, cantidad, id_usuario) VALUES (?,?,?,?,?,?,?)",[datos.id_cont, datos.descripcion,datos.id_color, datos.id_iden, datos.id_clas, datos.cantidad, idusu], funcion);
         //console.log(res);
     },
 
-    obtDonaciones: function (conexion,nombres, funcion) {
-        conexion.query("SELECT d.id_donacion, us.nombre AS Usuario, cont.nombre AS Contenedor, d.descripcion, c.descripcion AS Color, iden.descripcionIden AS Tipo, clas.descripcionClas AS Clasificacion, d.cantidad, d.fecha FROM donacion AS d INNER JOIN usuarios AS us ON d.id_usuario = us.id INNER JOIN contenedor AS cont ON d.id_cont = cont.id_cont INNER JOIN color AS c ON d.id_color = c.id_color INNER JOIN identificacion AS iden ON d.id_iden = iden.id_iden INNER JOIN clasificacion AS clas ON d.id_clas = clas.id_clas WHERE id_usuario = ?",[nombres], funcion);
+    obtDonaciones: function (conexion,idusu, funcion) {
+        conexion.query("SELECT d.id_donacion, us.nombre AS Usuario, cont.nombre AS Contenedor, d.descripcion, c.descripcion AS Color, iden.descripcionIden AS Tipo, clas.descripcionClas AS Clasificacion, d.cantidad, d.fecha FROM donacion AS d INNER JOIN usuarios AS us ON d.id_usuario = us.id INNER JOIN contenedor AS cont ON d.id_cont = cont.id_cont INNER JOIN color AS c ON d.id_color = c.id_color INNER JOIN identificacion AS iden ON d.id_iden = iden.id_iden INNER JOIN clasificacion AS clas ON d.id_clas = clas.id_clas WHERE id_usuario = ?",[idusu], funcion);
     }
 }
