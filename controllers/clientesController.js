@@ -28,28 +28,6 @@ module.exports = {
     },
 
     misDonaciones: function (req, res) {
-        /*
-        var queries = [
-            "SELECT * FROM usuarios",
-            "SELECT * FROM contenedor",
-            "SELECT * FROM clasificacion",
-            "SELECT * FROM identificacion",
-            "SELECT * FROM color",
-            "SELECT * FROM donacion"
-        ];
-        conexion.query(queries.join(';'), function (err, results) {
-            if (err) throw err;
-           // console.log(results);
-            res.render('dashboardClientes/misDonaciones', {
-                usuarios: results[0],
-                contenedor: results[1],
-                clasificacion: results[2],
-                identificacion: results[3],
-                color: results[4],
-                donar: results[5]
-            });
-        })   */
-
         
         donar.obtDonaciones(conexion, function (err, datos) {
             console.log(datos);

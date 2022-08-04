@@ -14,6 +14,15 @@ module.exports = {
     actualizar: function (conexion, datos, funcion) {
         conexion.query("UPDATE usuarios SET nombre =?, username=?, password=?, email=? WHERE id=?", [datos.nombre, datos.username, datos.password, datos.email, datos.id], funcion);
     },
+    /*
+    retornarDatosIdCont: function (conexion, id_cont, funcion) {
+        conexion.query("SELECT * FROM contenedor WHERE id_cont=?", [id_cont], funcion);
+    },
+*/
+    borrarCont: function (conexion, id_cont, funcion) {
+        conexion.query("DELETE FROM contenedor WHERE id_cont=?", [id_cont], funcion);
+    }
+
 
     
 }

@@ -64,7 +64,7 @@ module.exports = {
     },
     createContenedores: function (req, res) {
         juguetes.obtUbicacion(conexion, function (err, datos) {
-            res.render('dashboardAdmin/contenedores/createContenedor', { juguetes: datos });
+            res.render('dashboardAdmin/contenedores/createContenedor', );
         });
     },
     registerContenedor: function (req, res) {
@@ -77,6 +77,13 @@ module.exports = {
         })
 
     },
+    createDireccion: function (req, res) {
+        juguetes.obtUbicacion(conexion, function (err, datos) {
+            res.render('dashboardAdmin/contenedores/createDireccion', { juguetes: datos });
+        })
+        
+    },
+    
 
     //############Juguetes###########
     color: function (req, res) {
@@ -97,5 +104,31 @@ module.exports = {
         })
 
     },
+
+    editarCont: function (req, res) {
+        juguetes.retornarDatosIdCont(conexion, req.params.id, function (err, registros) {
+            console.log(registros[0]);
+            res.render('dashboardAdmin/editContenedor', { juguetes: registros[0] });
+        });
+    },
+    actualizarCont: function (req, res) {
+        console.log(req.body.nombre);
+        console.log(req.body.id_ubi);
+        if (req.body.nombre) {
+            usuarios.actualizar(conexion, req.body, function (err) {
+
+            });
+        }
+        res.redirect('/dashboardAdmin/ctrlUsuarios');
+
+    },
+
+    eliminarContenedor: function (req, res) {
+        console.log("Recepción de datos");
+        console.log(req.params.id_cont);
+        usuarios.borrarCont(conexion, req.params.id_cont, function (err) {
+            res.redirect('/dashboardAdmin/contenedores');
+        })
+    }
 
 }

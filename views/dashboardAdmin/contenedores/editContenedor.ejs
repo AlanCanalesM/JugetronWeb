@@ -1,0 +1,41 @@
+<%- include ../templates/header_dash.ejs %>
+    <div class="container-fluid">
+
+        <!-- Page Heading -->
+        <!-- DataTales Example -->
+        <div class="card shadow mb-4">
+
+            <div class="card-header py-3">
+                <h4 class="m-0 font-weight-bold " style="color: #293a4a;">Crear Contenedor</h4>
+            </div>
+
+            <!-- Inicio Formularios -->
+
+            <form class="col-md-12 mb-4 mt-4" action="/dashboardAdmin/prueba" method="POST">
+                <input hidden type="text" class="form-control" id="id_cont" name="id_cont" tabindex="1">
+                <div class="form-group col-md-6">
+                    <label class="form-label">Nombre</label>
+                    <input type="text" class="form-control" id="nombre" name="nombre" tabindex="2">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="exampleFormControlSelect1">Ubicación</label>
+                    <select class="form-control" id="id_ubi" tabindex="3" name="id_ubi">
+
+                        <option selected>Elige la Ubicación Disponible...</option>
+                        <% for(let ubicacion=0; ubicacion < juguetes.length; ubicacion++) { %>
+                            <option>
+                                <%= juguetes[ubicacion].id_ubi %>
+                                <%= juguetes[ubicacion].descripcion %>
+                            </option>
+                            <% }%>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-outline-info" tabindex="3">Guardar</button>
+                <a href="/dashboardAdmin/contenedores" class="btn btn-outline-danger">Cancelar</a>
+
+            </form>
+
+        </div>
+    </div>
+    </div>
+    <%- include ../templates/footer_dash.ejs %>
