@@ -12,25 +12,34 @@ module.exports = {
 
     donar: function (req, res) {
         donaciones.obtCaracteristicas(conexion, function (err, datos) {
-            res.render('dashboardClientes/clientesDonar', { donaciones: datos });
+            res.render('dashboardClientes/clientesDonar', { donaciones: datos, nombre:req.session.nombre });
         })
 
     },
 
     registerDon: function (req, res) {
-        // res.send(req.body);
-        console.log(req.body);
-        donar.insertarDon(conexion, req.body, function (err) {
+        //res.send(req.body);
+        //res.send(req.body);
+        
+        donar.insertarDon(conexion,req.body, function (err, result) {
 
+            
             res.redirect("/dashboardClientes/misDonaciones");
+            
         });
     },
 
     misDonaciones: function (req, res) {
+<<<<<<< HEAD
 
         donar.obtDonaciones(conexion, function (err, datos) {
+=======
+        
+        const nombres=req.session.nombre;
+        donar.obtDonaciones(conexion, nombres ,function (err, datos) {
+>>>>>>> d2707cc2337e8cd60acadbcf21ed67826066656c
             console.log(datos);
-            res.render('dashboardClientes/misDonaciones', { donar: datos });
+            res.render('dashboardClientes/misDonaciones', { donar: datos, nombre:req.session.nombre });
         });
 
     },
