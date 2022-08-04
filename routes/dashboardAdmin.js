@@ -35,23 +35,43 @@ router.post("/prueba", (request, response) => {
     })
 });
 router.get('/createContenedores', usuariosController.createContenedores);
-//router.get('/editar/:id', usuariosController.editarCont);
-//router.post('/actualizar', usuariosController.actualizarCont);
 router.post('/eliminar/:id_cont', usuariosController.eliminarContenedor);
+router.get('/editar/:id', usuariosController.editarCont);
+router.post('/actualizar', usuariosController.actualizarCont);
+
+
 
  //######Direcciones##############
 router.get('/direcciones', usuariosController.direcciones);
 router.get('/createDireccion', usuariosController.createDireccion);
+router.post('/direcciones', usuariosController.registerDireccion);
+router.post('/direcciones/eliminar/:id_ubi', usuariosController.eliminarDireccion);
+router.get('/editarDireccion/editar/:id_ubi', usuariosController.editarDireccion);
+router.post('/direcciones/actualizar', usuariosController.actualizarDireccion);
 
 //######Colores##############
 router.get('/color', usuariosController.color);
+router.get('/createColor', usuariosController.createColor);
+router.post('/color', usuariosController.registerColor);
+router.post('/color/eliminar/:id_color', usuariosController.eliminarColor);
+router.get('/editarColor/editar/:id_color', usuariosController.editarColor);
+router.post('/color/actualizar', usuariosController.actualizarColor);
+
 
 //######Identificadores##############
 router.get('/identificacion', usuariosController.identificacion);
+router.get('/createIdentificacion', usuariosController.createIdentificacion);
+router.post('/identificacion', usuariosController.registerIdentificacion);
+router.post('/identificacion/eliminar/:id_iden', usuariosController.eliminarIdentificacion);
+router.get('/editarIdentificacion/editar/:id_iden', usuariosController.editarIdentificacion);
+router.post('/identificacion/actualizar', usuariosController.actualizarIdentificacion);
 
 //######Clasificaciones##############
 router.get('/clasificacion', usuariosController.clasificacion);
-
-
+router.get('/createClasificacion', usuariosController.createClasificacion);
+router.post('/clasificacion', usuariosController.registerClasificacion);
+router.post('/clasificacion/delete/:id_clas', usuariosController.eliminarClasificacion);
+router.get('/editarClasificacion/editar/:id_clas', usuariosController.editarClasificacion);
+router.post('/clasificacion/actualizar', usuariosController.actualizarClasificacion);
 
 module.exports = router;

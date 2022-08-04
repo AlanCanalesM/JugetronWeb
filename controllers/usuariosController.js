@@ -64,13 +64,15 @@ module.exports = {
     },
     createContenedores: function (req, res) {
         juguetes.obtUbicacion(conexion, function (err, datos) {
-            res.render('dashboardAdmin/contenedores/createContenedor', );
+            res.render('dashboardAdmin/contenedores/createContenedor', { juguetes: datos });
         });
     },
     registerContenedor: function (req, res) {
 
         res.send(req.body);
     },
+
+    //########################Direcciones##################################
     direcciones: function (req, res) {
         juguetes.obtUbicacion(conexion, function (err, datos) {
             res.render('dashboardAdmin/contenedores/direcciones', { juguetes: datos });
@@ -81,29 +83,178 @@ module.exports = {
         juguetes.obtUbicacion(conexion, function (err, datos) {
             res.render('dashboardAdmin/contenedores/createDireccion', { juguetes: datos });
         })
-        
+
     },
-    
+    registerDireccion: function (req, res) {
+        // res.send(req.body);
+
+        console.log(req.body);
+        juguetes.inertartDireccion(conexion, req.body, function (err) {
+            res.redirect('/dashboardAdmin/direcciones');
+        })
+
+    },
+    eliminarDireccion: function (req, res) {
+        console.log("Recepción de Datos");
+        console.log(req.params.id_ubi);
+
+        juguetes.borrarDireccion(conexion, req.params.id_ubi, function (err) {
+            res.redirect('/dashboardAdmin/direcciones');
+        })
+
+    },
+    editarDireccion: function (req, res) {
+        juguetes.retornarDatosDireccion(conexion, req.params.id_ubi, function (err, datos) {
+            console.log(datos[0]);
+            res.render('dashboardAdmin/contenedores/editarDireccion', { juguetes: datos[0] });
+        })
+
+    },
+    actualizarDireccion: function (req, res) {
+        console.log(req.body.descripcion);
+        if (req.body.descripcion) {
+
+            juguetes.actualizarDireccion(conexion, req.body, function (err) {
+
+            })
+        }
+        res.redirect('/dashboardAdmin/direcciones');
+    },
+
 
     //############Juguetes###########
+    //########################Direcciones##################################
     color: function (req, res) {
         juguetes.obtColor(conexion, function (err, datos) {
             res.render('dashboardAdmin/juguetes/color', { juguetes: datos });
         })
 
     },
+    createColor: function (req, res) {
+
+        res.render('dashboardAdmin/juguetes/createColor');
+
+    },
+    registerColor: function (req, res) {
+        //res.send(req.body);
+        juguetes.insertarColor(conexion, req.body, function (err) {
+            res.redirect('/dashboardAdmin/color');
+        })
+    },
+    eliminarColor: function (req, res) {
+        console.log("Recepción de Datos");
+        console.log(req.params.id_color);
+
+        juguetes.borrarColor(conexion, req.params.id_color, function (err) {
+            res.redirect('/dashboardAdmin/color');
+        })
+
+    },
+    editarColor: function (req, res) {
+        juguetes.retornarDatosColor(conexion, req.params.id_color, function (err, datos) {
+            console.log(datos[0]);
+            res.render('dashboardAdmin/juguetes/editarColor', { juguetes: datos[0] });
+        })
+
+    },
+    actualizarColor: function (req, res) {
+        console.log(req.body.descripcion);
+        if (req.body.descripcion) {
+
+            juguetes.actualizarColor(conexion, req.body, function (err) {
+
+            })
+        }
+        res.redirect('/dashboardAdmin/color');
+    },
+
+    //########################Identificacion##################################
     identificacion: function (req, res) {
         juguetes.obtIdentificacion(conexion, function (err, datos) {
             res.render('dashboardAdmin/juguetes/identificacion', { juguetes: datos });
         })
 
     },
+    createIdentificacion: function (req, res) {
+        res.render('dashboardAdmin/juguetes/createIdentificacion');
+    },
+    registerIdentificacion: function (req, res) {
+        //res.send(req.body);
+        juguetes.insertarIdentificacion(conexion, req.body, function (err) {
+            res.redirect('/dashboardAdmin/identificacion');
+        })
+    },
+    eliminarIdentificacion: function (req, res) {
+        console.log("Recepción de Datos");
+        console.log(req.params.id_iden);
+
+        juguetes.borrarIdentificacion(conexion, req.params.id_iden, function (err) {
+            res.redirect('/dashboardAdmin/identificacion');
+        })
+
+    },
+    editarIdentificacion: function (req, res) {
+        juguetes.retornarDatosIden(conexion, req.params.id_iden, function (err, datos) {
+            console.log(datos[0]);
+            res.render('dashboardAdmin/juguetes/editarIdentificacion', { juguetes: datos[0] });
+        })
+
+    },
+    actualizarIdentificacion: function (req, res) {
+        console.log(req.body.descripcionIden);
+        if (req.body.descripcionIden) {
+
+            juguetes.actualizarIdentificacion(conexion, req.body, function (err) {
+
+            })
+        }
+        res.redirect('/dashboardAdmin/identificacion');
+    },
+
+    //########################Clasificacion##################################
     clasificacion: function (req, res) {
         juguetes.obtClasificacion(conexion, function (err, datos) {
             res.render('dashboardAdmin/juguetes/clasificacion', { juguetes: datos });
         })
 
     },
+    createClasificacion: function (req, res) {
+        res.render('dashboardAdmin/juguetes/createClasificacion');
+    },
+    registerClasificacion: function (req, res) {
+        //res.send(req.body);
+        juguetes.insertarClasificacion(conexion, req.body, function (err) {
+            res.redirect('/dashboardAdmin/clasificacion');
+        })
+    },
+    eliminarClasificacion: function (req, res) {
+        console.log("Recepción de Datos");
+        console.log(req.params.id_clas);
+
+        juguetes.borrarClasificacion(conexion, req.params.id_clas, function (err) {
+            res.redirect('/dashboardAdmin/clasificacion');
+        })
+
+    },
+    editarClasificacion: function (req, res) {
+        juguetes.retornarDatosClas(conexion, req.params.id_clas, function (err, datos) {
+            console.log(datos[0]);
+            res.render('dashboardAdmin/juguetes/editarClasificacion', { juguetes: datos[0] });
+        })
+
+    },
+    actualizarClasificacion: function (req, res) {
+        console.log(req.body.descripcionClas);
+        if (req.body.descripcionClas) {
+
+            juguetes.actualizarClasificacion(conexion, req.body, function (err) {
+
+            })
+        }
+        res.redirect('/dashboardAdmin/clasificacion');
+    },
+
+    //########################Contenedores#################
 
     editarCont: function (req, res) {
         juguetes.retornarDatosIdCont(conexion, req.params.id, function (err, registros) {

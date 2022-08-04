@@ -11,15 +11,15 @@
 
             <!-- Inicio Formularios -->
 
-            <form class="col-md-12 mb-4 mt-4" action="/dashboardAdmin/prueba" method="POST">
-                <input hidden type="text" class="form-control" id="id_cont" name="id_cont" tabindex="1">
+            <form class="col-md-12 mb-4 mt-4" action="../../contenedores/actualizar/" method="POST">
+                <input hidden type="text" class="form-control" id="id_cont" name="id_cont" value="<%= juguetes.id_cont %>" tabindex="1">
                 <div class="form-group col-md-6">
                     <label class="form-label">Nombre</label>
-                    <input type="text" class="form-control" id="nombre" name="nombre" tabindex="2">
+                    <input type="text" class="form-control" id="nombre" name="nombre" value="<%= juguetes.nombre %>" tabindex="2">
                 </div>
                 <div class="form-group col-md-6">
                     <label for="exampleFormControlSelect1">Ubicación</label>
-                    <select class="form-control" id="id_ubi" tabindex="3" name="id_ubi">
+                    <select class="form-control" id="id_ubi" tabindex="3" name="id_ubi" value="<%= juguetes.id_ubi %>">
 
                         <option selected>Elige la Ubicación Disponible...</option>
                         <% for(let ubicacion=0; ubicacion < juguetes.length; ubicacion++) { %>

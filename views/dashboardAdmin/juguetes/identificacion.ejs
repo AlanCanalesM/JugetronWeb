@@ -9,7 +9,7 @@
                 <h4 class="m-0 font-weight-bold " style="color: #293a4a;">Identificaciones</h4>
             </div>
             <div class="container-responsive col-md-12">
-                <a href="/dashboardAdmin/createUsers" class="btn btn-outline-primary mt-4">Nueva Identificación</a>
+                <a href="/dashboardAdmin/createIdentificacion" class="btn btn-outline-primary mt-4">Nueva Identificación</a>
             </div>
             <div class="card-body">
                 <div class="table-responsive">
@@ -40,12 +40,12 @@
                                 </td>
                                 <td>
                                     <div class="btn-group-vertical" role="group" aria-label="Vertical button group">
-                                        <form class="form-inline" method="get" action="/dashboardAdmin/editar/">
+                                        <form class="form-inline" method="get" action="/dashboardAdmin/editarIdentificacion/editar/<%= juguetes[iden].id_iden %>">
                                             <button class="btn btn-outline-info" type="submit">Editar</button>
                                         </form>
                                     </div>
                                     <div class="btn-group-vertical" role="group" aria-label="Vertical button group">
-                                        <form class="form-inline" method="post" action="/dashboardAdmin/delete/%>">
+                                        <form class="form-inline" method="post" action="/dashboardAdmin/identificacion/eliminar/<%= juguetes[iden].id_iden %>">
                                             <button class="btn btn-outline-danger" type="submit">Borrar</button>
                                         </form>
                                     </div>

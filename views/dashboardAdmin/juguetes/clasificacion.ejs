@@ -9,7 +9,7 @@
                 <h4 class="m-0 font-weight-bold " style="color: #293a4a;">Clasificaciones</h4>
             </div>
             <div class="container-responsive col-md-12">
-                <a href="/dashboardAdmin/createUsers" class="btn btn-outline-primary mt-4">Nueva Clasificación</a>
+                <a href="/dashboardAdmin/createClasificacion" class="btn btn-outline-primary mt-4">Nueva Clasificación</a>
             </div>
             <div class="card-body">
                 <div class="table-responsive">
@@ -41,12 +41,12 @@
                                     </td>
                                     <td>
                                         <div class="btn-group-vertical" role="group" aria-label="Vertical button group">
-                                            <form class="form-inline" method="get" action="/dashboardAdmin/editar/">
+                                            <form class="form-inline" method="get" action="/dashboardAdmin/editarClasificacion/editar/<%= juguetes[clas].id_clas %>">
                                                 <button class="btn btn-outline-info" type="submit">Editar</button>
                                             </form>
                                         </div>
                                         <div class="btn-group-vertical" role="group" aria-label="Vertical button group">
-                                            <form class="form-inline" method="post" action="/dashboardAdmin/delete/%>">
+                                            <form class="form-inline" method="post" action="/dashboardAdmin/clasificacion/delete/<%= juguetes[clas].id_clas %>">
                                                 <button class="btn btn-outline-danger" type="submit">Borrar</button>
                                             </form>
                                         </div>
