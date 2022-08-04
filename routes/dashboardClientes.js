@@ -21,7 +21,8 @@ router.get('/clientesDonar', (req, res) => {
             ubicacion: results[0],
             identificacion: results[1],
             clasificacion: results[2],
-            color: results[3]
+            color: results[3],
+            nombre:req.session.nombre
         });
     })
 });
