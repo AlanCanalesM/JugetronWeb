@@ -24,11 +24,10 @@ module.exports = {
 
             res.redirect("/dashboardClientes/misDonaciones");
         });
-
     },
 
     misDonaciones: function (req, res) {
-        
+
         donar.obtDonaciones(conexion, function (err, datos) {
             console.log(datos);
             res.render('dashboardClientes/misDonaciones', { donar: datos });

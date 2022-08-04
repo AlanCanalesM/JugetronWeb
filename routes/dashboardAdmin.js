@@ -36,8 +36,8 @@ router.post("/prueba", (request, response) => {
 });
 router.get('/createContenedores', usuariosController.createContenedores);
 router.post('/eliminar/:id_cont', usuariosController.eliminarContenedor);
-router.get('/editar/:id', usuariosController.editarCont);
-router.post('/actualizar', usuariosController.actualizarCont);
+router.get('/editarContenedor/editar/:id_cont', usuariosController.editarContenedor);
+router.post('/contenedores/actualizar', usuariosController.actualizarContenedor);
 
 
 

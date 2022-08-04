@@ -4,7 +4,12 @@ module.exports = {
     obtContenedor: function (conexion, funcion) {
         conexion.query("SELECT a.id_cont, a.nombre, b.descripcion FROM contenedor a INNER JOIN ubicacion b ON a.id_ubi = b.id_ubi", funcion);
     },
-
+    retornarDatosContenedor: function (conexion, id_cont, funcion) {
+        conexion.query("SELECT * FROM contenedor WHERE id_cont=?",[id_cont], funcion)
+    },
+    actualizarContenedor: function (conexion, datos, funcion) {
+        conexion.query("UPDATE contenedor SET nombre=? WHERE id_cont = ?", [datos.nombre, datos.id_cont], funcion);
+    },
     obtUbicacion: function (conexion, funcion) {
         conexion.query("SELECT * FROM ubicacion", funcion);
     },

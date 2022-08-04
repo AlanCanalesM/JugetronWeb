@@ -256,22 +256,23 @@ module.exports = {
 
     //########################Contenedores#################
 
-    editarCont: function (req, res) {
-        juguetes.retornarDatosIdCont(conexion, req.params.id, function (err, registros) {
-            console.log(registros[0]);
-            res.render('dashboardAdmin/editContenedor', { juguetes: registros[0] });
-        });
+    editarContenedor: function (req, res) {
+        juguetes.retornarDatosContenedor(conexion, req.params.id_cont, function (err, datos) {
+            console.log(datos[0]);
+            res.render('dashboardAdmin/contenedores/editarContenedor', { juguetes: datos[0] });
+        })
+
     },
-    actualizarCont: function (req, res) {
+    actualizarContenedor: function (req, res) {
         console.log(req.body.nombre);
         console.log(req.body.id_ubi);
         if (req.body.nombre) {
-            usuarios.actualizar(conexion, req.body, function (err) {
 
-            });
+            juguetes.actualizarContenedor(conexion, req.body, function (err) {
+
+            })
         }
-        res.redirect('/dashboardAdmin/ctrlUsuarios');
-
+        res.redirect('/dashboardAdmin/contenedores');
     },
 
     eliminarContenedor: function (req, res) {
