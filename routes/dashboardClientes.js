@@ -4,6 +4,7 @@ var router = express.Router();
 
 const clientesController = require("../controllers/clientesController");
 const { identificacion } = require('../controllers/usuariosController');
+const mainController = require('../controllers/mainController');
 
 
 router.get('/', clientesController.clienteMain);
@@ -29,5 +30,9 @@ router.get('/clientesDonar', (req, res) => {
 router.get('/misDonaciones', clientesController.misDonaciones);
 router.get('/perfil', clientesController.perfilCliente);
 router.post('/misDonaciones', clientesController.registerDon);
+
+
+router.get('principal/index2', mainController.index2);
+
 
 module.exports = router;
