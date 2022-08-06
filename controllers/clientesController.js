@@ -39,7 +39,7 @@ module.exports = {
 
     },
 
-    perfilCliente: function (req, res) {
-        res.render('dashboardClientes/perfil');
+    perfilCliente: function (request, res) {
+        res.render('dashboardClientes/perfil', {nombre: request.session.nombre, username:request.session.username, pass:request.session.pass, email:request.session.email , tipo:request.session.tipo});
     },
 }

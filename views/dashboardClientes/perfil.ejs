@@ -18,9 +18,9 @@
                                 <div class="card-body text-center">
                                     <img src="/images/perfil.webp" alt="avatar" class="rounded-circle img-fluid"
                                         style="width: 150px;">
-                                    <h5 class="my-3">John Smith</h5>
-                                    <p class="text-muted mb-1">Administrador</p>
-                                    <p class="text-muted mb-4">Bay Area, San Francisco, CA</p>
+                                    <h5 class="my-3" id="nombre">John Smith</h5>
+                                    <p class="text-muted mb-1" id="tipo">Administrador</p>
+                                    <!---<p class="text-muted mb-4">Bay Area, San Francisco, CA</p>--->
 
                                 </div>
                             </div>
@@ -34,7 +34,7 @@
                                             <p class="mb-0">Nombre </p>
                                         </div>
                                         <div class="col-sm-9">
-                                            <p class="text-muted mb-0">Johnatan Smith</p>
+                                            <p class="text-muted mb-0" id="nombre1">Johnatan Smith</p>
                                         </div>
                                     </div>
                                     <hr>
@@ -43,7 +43,7 @@
                                             <p class="mb-0">Cuenta</p>
                                         </div>
                                         <div class="col-sm-9">
-                                            <p class="text-muted mb-0">example@example.com</p>
+                                            <p class="text-muted mb-0" id="email">example@example.com</p>
                                         </div>
                                     </div>
                                     <hr>
@@ -53,7 +53,7 @@
                                         </div>
                                         <div class="col-sm-9">
                                             <div class="input-group">
-                                                <input ID="password" type="password" Class="form-control">
+                                                <input ID="password" type="password" Class="form-control" id="pass">
                                                 <div class="input-group-append">
                                                     <button id="show_password" class="btn btn-primary" type="button"
                                                         onclick="showPass()"> <span
@@ -63,8 +63,8 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <hr>
-                                    <div class="row">
+                                    <!---<hr>
+                                     <div class="row">
                                         <div class="col-sm-3">
                                             <p class="mb-0">Email</p>
                                         </div>
@@ -72,15 +72,15 @@
                                             <p class="text-muted mb-0">(098) 765-4321</p>
                                         </div>
                                     </div>
-                                    <hr>
-                                    <div class="row">
+                                    <hr>--->
+                                    <!----<div class="row">
                                         <div class="col-sm-3">
                                             <p class="mb-0">Direccion</p>
                                         </div>
                                         <div class="col-sm-9">
                                             <p class="text-muted mb-0">Bay Area, San Francisco, CA</p>
                                         </div>
-                                    </div>
+                                    </div>--->
                                 </div>
                             </div>
 
@@ -97,5 +97,19 @@
 </div>
 </div>
 
-<script src="/javascripts/showPass.js"></script>
+<!---<script src="/javascripts/showPass.js"></script>-->
     <%- include templates/dashUsuariosFooter.ejs %>
+
+    <script type="text/javascript">
+          
+        window.addEventListener('load', function(){
+          
+            alert('<%= nombre %>');
+            document.getElementById("nombre").innerHTML='<%= nombre %>';
+            document.getElementById("tipo").innerHTML='<%= tipo %>';
+            document.getElementById("nombre1").innerHTML='<%= nombre %>';
+            document.getElementById("email").innerHTML='<%= email %>';
+            document.getElementById("pass").innerHTML='<%= pass %>';
+           
+        });
+      </script>

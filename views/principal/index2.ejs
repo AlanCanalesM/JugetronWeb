@@ -82,7 +82,11 @@
                         <a class="nav-link page-scroll" href="#download">CONTACTANOS</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link page-scroll" href="#screens">DASHBOARD</a>
+                        <a class="nav-link page-scroll" href="/users/tipousuario">DASHBOARD</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="#screens" id="nusuario"></a>
                     </li>
 
                 </ul>
@@ -890,3 +894,13 @@
 </body>
 
 </html>
+
+<script type="text/javascript">
+
+    window.addEventListener('load', function () {
+
+        alert('<%= nombre %>');
+        document.getElementById("nusuario").innerHTML = '<%= nombre %>';
+
+    });
+</script>

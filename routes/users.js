@@ -74,9 +74,13 @@ router.post('/servicioLogin', (request, response) => {
     if (result[0] != null) {
 
       /*response.redirect("http://localhost:3000/");*/
-      request.session.nombre = request.body.username;
+      request.session.nombre = result[0].nombre.toString();
       request.session.idusu=result[0].id.toString();
-      response.render('principal/mainUsuarios', { nombre: request.session.nombre });
+      request.session.username=result[0].username.toString();
+      request.session.pass=result[0].password.toString();
+      request.session.email=result[0].email.toString();
+
+      response.render('principal/index2', { nombre: request.session.nombre });
 
     } else {
       response.send("Credenciales erroneas");
@@ -86,16 +90,19 @@ router.post('/servicioLogin', (request, response) => {
 });
 
 router.get('/tipousuario', (request, response) =>{
-  const username = request.session.nombre;
+  const username = request.session.username;
 
   pool.query("SELECT id_tuser from usuarios WHERE username=?", [username], (error, result)=>{
     if(error) throw error;
 
     if(result[0].id_tuser==1){
 
-      response.render('dashboardAdmin/dashboard', {nombre:request.session.nombre});
+      request.session.tipo="Administrador";
+      response.render('dashboardAdmin/dashboard', {nombre: request.session.nombre, username:request.session.username, pass:request.session.pass, email:request.session.email , tipo:request.session.tipo});
     }else{
-      response.render('dashboardClientes/dashboardClientes', {nombre:request.session.nombre});
+      request.session.tipo="Donante";
+      response.render('dashboardClientes/dashboardClientes', {nombre: request.session.nombre, username:request.session.username, pass:request.session.pass, email:request.session.email , tipo:request.session.tipo});
+
     }
     
   })
