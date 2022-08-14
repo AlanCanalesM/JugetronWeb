@@ -6,7 +6,7 @@ var router = express.Router();
 
 router.get('/', (request, response)=>{
     request.session.destroy();
-    response.render('index', {title:'index', nombre:'sn'})
+    response.render('index', {title:'index', nombre:'SIGN-UP'})
 });
 
 module.exports = router;

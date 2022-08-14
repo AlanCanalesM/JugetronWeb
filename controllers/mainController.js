@@ -4,7 +4,7 @@ module.exports = {
     },
 */
     index2: function (req, res) {
-        res.render('principal/index2', {nombre:'SN'});
+        res.render('principal/index2', {nombre:'SIGN-UP'});
     }
     
 }
