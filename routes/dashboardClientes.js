@@ -8,6 +8,7 @@ const mainController = require('../controllers/mainController');
 
 
 router.get('/', clientesController.clienteMain);
+//router.get('/dashboard', clientesController.clienteMain2);
 router.get('/clientesDonar', (req, res) => {
     var queries = [
         "SELECT * FROM ubicacion",

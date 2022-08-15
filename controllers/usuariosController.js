@@ -3,6 +3,7 @@ var usuarios = require("../model/usuariosModel");
 var juguetes = require("../model/juguetesModel");
 
 module.exports = {
+
     index: function (req, res) {
         res.render('dashboardAdmin/dashboard', { nombre: req.session.nombre });
     },

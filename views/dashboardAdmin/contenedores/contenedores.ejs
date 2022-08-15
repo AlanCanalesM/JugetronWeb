@@ -1,70 +1,81 @@
-<%- include ../templates/header_dash.ejs %>
+<%- include ../templates/header_main.ejs %>
+
     <div class="container-fluid">
+        <h4 class="m-0 font-weight-bold " style="color: #293a4a;">Contenedores</h4>
+        <a href="/dashboardAdmin/createContenedores" class="btn btn-outline-primary mt-4"><i class="material-icons text-sm">add</i>Nuevo Contenedor</a>
+    </div>
 
-        <!-- Page Heading -->
 
-        <!-- DataTales Example -->
-        <div class="card shadow mb-4">
-            <div class="card-header py-3">
-                <h4 class="m-0 font-weight-bold " style="color: #293a4a;">Contenedores</h4>
-            </div>
-            <div class="container-responsive col-md-12">
-                <a href="/dashboardAdmin/createContenedores" class="btn btn-outline-primary mt-4">Nuevo Contenedor</a>
-            </div>
-            <div class="card-body">
 
-                <div class="table-responsive">
-                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                        <thead>
+    <div class="container-fluid py-4">
+        <div class="row">
+            <div class="col-12">
+                <div class="card my-4">
+                    <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
+                        <div class="bg-gradient-primary shadow-primary border-radius-lg pt-4 pb-3">
+                            <h6 class="text-white text-capitalize ps-3">Tabla de Contenedores</h6>
+                        </div>
+                    </div>
+                    <div class="card-body px-0 pb-2">
+                        <div class="table-responsive p-0">
+                            <table class="table align-items-center mb-0">
+                                <thead>
+                                    <tr>
+                                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                            ID</th>
+                                        <th
+                                            class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">
+                                            NOMBRE</th>
+                                        <th
+                                            class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">
+                                            UBICACIÓN</th>
+                                        <th
+                                            class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">
+                                            ACCIONES</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <% for(let contenedores=0; contenedores < juguetes.length; contenedores++) { %>
 
-                            <tr>
-                                <th>ID</th>
-                                <th>NOMBRE</th>
-                                <th>UBICACIÓN</th>
-                                <th>ACCIONES</th>
-                            </tr>
-                        </thead>
-                        <tfoot>
-                            <tr>
-                                <th>ID</th>
-                                <th>NOMBRE</th>
-                                <th>UBICACIÓN</th>
-                                <th>ACCIONES</th>
-                            </tr>
-                        </tfoot>
-                        <tbody>
-                            
-                            <% for(let contenedores=0; contenedores < juguetes.length; contenedores++) { %>
-                                <tr>
-                                    <td>
-                                       <%= juguetes[contenedores].id_cont %>
-                                    </td>
-                                    <td>
-                                        <%= juguetes[contenedores].nombre %>
-                                    </td>
-                                    <td>
-                                        <%= juguetes[contenedores].descripcion %>
-                                    </td>
-                                    <td>
-                                        <div class="btn-group-vertical" role="group" aria-label="Vertical button group">
-                                            <form class="form-inline" method="get" action="/dashboardAdmin/editarContenedor/editar/<%= juguetes[contenedores].id_cont %>">
-                                                <button class="btn btn-outline-info" type="submit">Editar</button>
-                                            </form>
-                                        </div>
-                                        <div class="btn-group-vertical" role="group" aria-label="Vertical button group">
-                                            <form class="form-inline" method="post" action="/dashboardAdmin/eliminar/<%= juguetes[contenedores].id_cont %>">
-                                                <button class="btn btn-outline-danger" type="submit">Borrar</button>
-                                            </form>
-                                        </div>
+                                        <tr>
+                                            <td class="align-middle">
+                                                <%= juguetes[contenedores].id_cont %>
+                                            </td>
+                                            <td class="align-middle">
+                                                <%= juguetes[contenedores].nombre %>
+                                            </td>
+                                            <td class="align-middle">
+                                                <%= juguetes[contenedores].descripcion %>
+                                            </td>
 
-                                </tr>
-                                <% } %>
-                        </tbody>
-                    </table>
+                                            <td class="align-middle">
+                                                <div class="btn-group-vertical" role="group"
+                                                    aria-label="Vertical button group">
+                                                    <form class="form-inline" method="get"
+                                                        action="/dashboardAdmin/editarContenedor/editar/<%= juguetes[contenedores].id_cont %>">
+                                                        <button class="btn btn-outline-info"
+                                                            type="submit">Editar</button>
+                                                    </form>
+                                                </div>
+                                                <div class="btn-group-vertical" role="group"
+                                                    aria-label="Vertical button group">
+                                                    <form class="form-inline" method="post"
+                                                        action="/dashboardAdmin/eliminar/<%= juguetes[contenedores].id_cont %>">
+                                                        <button class="btn btn-outline-danger"
+                                                            type="submit">Borrar</button>
+                                                    </form>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <% } %>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+        <!--End Table-->
+    </div>
 
-    </div>
-    </div>
-    <%- include ../templates/footer_dash.ejs %>
+        <%- include ../templates/footer_main.ejs %>

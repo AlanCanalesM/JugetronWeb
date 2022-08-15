@@ -6,6 +6,7 @@ const { identificacion } = require("./usuariosController");
 //dfsdf
 
 module.exports = {
+    
     clienteMain: function (req, res) {
         res.render('dashboardClientes/dashboardClientes', { nombre: req.session.nombre });
     },

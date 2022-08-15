@@ -1,41 +1,50 @@
-<%- include ../templates/header_dash.ejs %>
-    <div class="container-fluid">
+<%- include ../templates/header_main.ejs %>
 
-        <!-- Page Heading -->
-        <!-- DataTales Example -->
-        <div class="card shadow mb-4">
+    <div class="container-fluid py-4">
+        <div class="row">
+            <div class="col-12">
+                <div class="card my-4">
+                    <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
+                        <div class="bg-gradient-primary shadow-primary border-radius-lg pt-4 pb-3">
+                            <h6 class="text-white text-capitalize ps-3">Registrar Nuevo Contenedor</h6>
+                        </div>
+                    </div>
+                    <div class="card-body p-3 pb-0">
+                        <form class="mt-4 mb-0 " action="/dashboardAdmin/prueba" method="POST">
+                            <input hidden type="text" class="form-control" id="id_cont" name="id_cont" tabindex="1">
+                            <div class="ms-md-auto pe-md-3 d-flex align-items-center">
+                                <div class="input-group input-group-outline">
+                                    <label class="form-label">Nombre Comleto...</label>
+                                    <input type="text" class="form-control" id="nombre" name="nombre" tabindex="1">
+                                </div>
+                            </div>
+                            <div class="ms-md-auto pe-md-3 d-flex align-items-center mt-4">
+                                <div class="input-group input-group-outline">
+                                    <select class="form-control" id="id_ubi" tabindex="3" name="id_ubi">
 
-            <div class="card-header py-3">
-                <h4 class="m-0 font-weight-bold " style="color: #293a4a;">Crear Contenedor</h4>
+                                        <option selected>Elige la Ubicación Disponible...</option>
+                                        <% for(let ubicacion=0; ubicacion < juguetes.length; ubicacion++) { %>
+                                            <option>
+                                                <%= juguetes[ubicacion].id_ubi %>
+                                                    <%= juguetes[ubicacion].descripcion %>
+                                            </option>
+                                            <% }%>
+                                    </select>
+                                </div>
+                            </div>
+
+
+
+
+                            <div class="mt-4 mb-0">
+                                <button type="submit" class="btn btn-outline-info" tabindex="3">Guardar</button>
+                                <a href="/dashboardAdmin/contenedores" class="btn btn-outline-danger">Cancelar</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
             </div>
-
-            <!-- Inicio Formularios -->
-
-            <form class="col-md-12 mb-4 mt-4" action="/dashboardAdmin/prueba" method="POST">
-                <input hidden type="text" class="form-control" id="id_cont" name="id_cont" tabindex="1">
-                <div class="form-group col-md-6">
-                    <label class="form-label">Nombre</label>
-                    <input type="text" class="form-control" id="nombre" name="nombre" tabindex="2">
-                </div>
-                <div class="form-group col-md-6">
-                    <label for="exampleFormControlSelect1">Ubicación</label>
-                    <select class="form-control" id="id_ubi" tabindex="3" name="id_ubi">
-
-                        <option selected>Elige la Ubicación Disponible...</option>
-                        <% for(let ubicacion=0; ubicacion < juguetes.length; ubicacion++) { %>
-                            <option>
-                                <%= juguetes[ubicacion].id_ubi %>
-                                <%= juguetes[ubicacion].descripcion %>
-                            </option>
-                            <% }%>
-                    </select>
-                </div>
-                <button type="submit" class="btn btn-outline-info" tabindex="3">Guardar</button>
-                <a href="/dashboardAdmin/contenedores" class="btn btn-outline-danger">Cancelar</a>
-
-            </form>
-
         </div>
     </div>
-    </div>
-    <%- include ../templates/footer_dash.ejs %>
+
+    <%- include ../templates/footer_main.ejs %>

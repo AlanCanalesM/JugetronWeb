@@ -1,4 +1,4 @@
-<%- include templates/header_dash.ejs %>
+<%- include templates/header_main.ejs %>
     <div class="container-fluid">
 
         <!-- Page Heading -->
@@ -13,34 +13,35 @@
             <!-- Inicio Formularios -->
             <form class="col-md-12 mb-4 mt-4" action="../actualizar" method="POST">
                 <input id="id" type="hidden" name="id" value="<%= usuario.id %>">
-                <div class="mb-3">
-                    <label class="form-label">Nombre Completo</label>
-                    <input type="text" class="form-control" id="nombre" name="nombre" value="<%= usuario.nombre %>"
-                        tabindex="1">
-                </div>
-                <div class="mb-3">
-                    <label class="form-label">UserName</label>
-                    <input type="text" class="form-control" id="username" name="username"
-                        value="<%= usuario.username %>" tabindex="2">
-                </div>
-                <div class="mb-3">
-                    <label class="form-label">Contraseña</label>
-                    <div class="col-sm-13">
-                        <div class="input-group">
-                            <input ID="password" type="password" Class="form-control" name="password" value="<%= usuario.password %>" tabindex="3">
-                            <div class="input-group-append">
-                                <button id="show_password" class="btn btn-primary" type="button" onclick="showPass()">
-                                    <span class="fa fa-eye-slash icon"></span>
-                                </button>
-                            </div>
-                        </div>
+
+                <div class="ms-md-auto pe-md-3 d-flex align-items-center mt-4">
+                    <div class="input-group input-group-outline">
+                        <label class="form-label">Nombre Completo</label>
+                        <input type="text" class="form-control" id="nombre" name="nombre" value="<%= usuario.nombre %>" tabindex="1">
                     </div>
                 </div>
-                <div class="mb-3">
-                    <label class="form-label">Correo e-mail</label>
-                    <input type="email" class="form-control" id="email" name="email" value="<%= usuario.email %>"
-                        tabindex="4">
+                <div class="ms-md-auto pe-md-3 d-flex align-items-center mt-4">
+                    <div class="input-group input-group-outline">
+                        <label class="form-label">UserName</label>
+                        <input type="text" class="form-control" id="username" name="username" value="<%= usuario.username %>" tabindex="2">
+                    </div>
                 </div>
+                <div class="pe-md-3 mt-4">
+                    <div class="input-group input-group-outline">
+                        <label class="form-label">Contraseña...</label>
+                        <input type="password" class="form-control" id="password" name="password" value="<%= usuario.password %>" tabindex="3">
+                        <button id="show_password" class="btn btn-primary" type="button"
+                            onclick="showPass()"> <span class="fa fa-eye-slash icon"></span>
+                        </button>
+                    </div>
+                </div>
+                <div class="ms-md-auto pe-md-3 d-flex align-items-center mt-4">
+                    <div class="input-group input-group-outline">
+                        <label class="form-label">Correo Electronico</label>
+                        <input type="text" class="form-control" id="email" name="email" value="<%= usuario.email %>" tabindex="4">
+                    </div>
+                </div>
+                
                 <button type="submit" class="btn btn-outline-info" tabindex="5">Guardar</button>
                 <a href="/dashboardAdmin/ctrlUsuarios" class="btn btn-outline-danger">Cancelar</a>
             </form>
@@ -49,4 +50,4 @@
 
     </div>
     </div>
-    <%- include templates/footer_dash.ejs %>
+    <%- include templates/footer_main.ejs %>
