@@ -8,6 +8,7 @@ const usuariosController = require("../controllers/usuariosController");
 router.get('/', usuariosController.index);
 //router.get('/dashboard', usuariosController.index2);
 router.get('/ctrlUsuarios', usuariosController.control);
+router.get('/donaciones', usuariosController.donaciones);
 router.get('/createUsers', usuariosController.create);
 router.post("/", usuariosController.register);
 router.post('/delete/:id', usuariosController.eliminar);

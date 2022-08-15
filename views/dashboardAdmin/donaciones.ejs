@@ -1,0 +1,102 @@
+<%- include templates/header_main.ejs %>
+
+
+    <!-- Page Heading -->
+
+
+    
+    <!--Table-->
+    <div class="container-fluid py-4">
+        <div class="row">
+            <div class="col-12">
+                <div class="card my-4">
+                    <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
+                        <div class="bg-gradient-primary shadow-primary border-radius-lg pt-4 pb-3">
+                            <h6 class="text-white text-capitalize ps-3">Tabla de Donaciones</h6>
+                        </div>
+                    </div>
+                    <div class="card-body px-0 pb-2">
+                        <div class="table-responsive p-0">
+                            <table class="table align-items-center mb-0">
+                                <thead>
+                                    <tr>
+                                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                            ID</th>
+                                        <th
+                                            class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">
+                                            USUARIO</th>
+                                        <th
+                                            class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">
+                                            CONTENEDOR</th>
+                                        <th
+                                            class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">
+                                            DESCRIPCIÓN</th>
+                                        <th
+                                            class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">
+                                            COLOR</th>
+                                        <th
+                                            class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">
+                                            IDENTIFICACIÓN</th>
+                                        <th
+                                            class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">
+                                            CLASIFICACIÓN</th>
+                                        <th
+                                            class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">
+                                            CANTIDAD</th>
+                                        <th
+                                            class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">
+                                            FECHA</th>
+                                       
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <% for(let dona=0; dona < donacion.length; dona++) { %>
+
+                                        <tr>
+                                            <td class="align-middle">
+                                                <%= donacion[dona].id_donacion %>
+                                            </td>
+                                            <td class="align-middle">
+                                                <%= donacion[dona].Usuario %>
+                                            </td>
+                                            <td class="align-middle">
+                                                <%= donacion[dona].Contenedor %>
+                                            </td>
+                                            <td class="align-middle">
+                                                <%= donacion[dona].descripcion %>
+                                            </td>
+                                            <td class="align-middle">
+                                                <%= donacion[dona].Color %>
+                                            </td>
+                                            <td class="align-middle">
+                                                <%= donacion[dona].Tipo %>
+                                            </td>
+                                            <td class="align-middle">
+                                                <%= donacion[dona].Clasificacion %>
+                                            </td>
+                                            <td class="align-middle">
+                                                <%= donacion[dona].cantidad %>
+                                            </td>
+                                            <!--
+                                            <td class="align-middle">
+                                                <%= donacion[dona].fecha %>
+                                            </td>
+                                            -->
+                                        </tr>
+                                        <% } %>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!--End Table-->
+
+
+
+
+    <!-- End of Main Content -->
+    <%- include templates/footer_main.ejs %>

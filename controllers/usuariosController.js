@@ -1,11 +1,35 @@
 var conexion = require("../config/conexion");
 var usuarios = require("../model/usuariosModel");
 var juguetes = require("../model/juguetesModel");
+const usuariosModel = require("../model/usuariosModel");
 
 module.exports = {
 
     index: function (req, res) {
-        res.render('dashboardAdmin/dashboard', { nombre: req.session.nombre });
+        //res.render('dashboardAdmin/dashboard', { nombre: req.session.nombre });
+        var queries = [
+            "SELECT COUNT(*) AS total FROM donacion",
+            "SELECT COUNT(*) AS total FROM usuarios",
+            "SELECT COUNT(*) AS total FROM contenedor",
+            "SELECT COUNT(*) AS total FROM ubicacion"
+        ];
+        conexion.query(queries.join(';'), function (err, results) {
+            if (err) throw err;
+           // console.log(results);
+           res.render('dashboardAdmin/dashboard', {
+                donacion: results[0],
+                usuarios: results[1],
+                contenedores: results[2],
+                ubicaciones: results[3],
+                nombre:req.session.nombre
+            });
+        })
+    },
+    donaciones: function (req, res) {
+        usuariosModel.obtDonaciones(conexion, function (err, datos) {
+            res.render('dashboardAdmin/donaciones', { donacion: datos });
+        })
+        
     },
 
     control: function (req, res) {
