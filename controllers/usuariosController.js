@@ -17,7 +17,7 @@ module.exports = {
             if (err) throw err;
            // console.log(results);
            res.render('dashboardAdmin/dashboard', {
-                donacion: results[0],
+                donaciones: results[0],
                 usuarios: results[1],
                 contenedores: results[2],
                 ubicaciones: results[3],
